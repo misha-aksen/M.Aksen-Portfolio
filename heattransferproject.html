@@ -1,0 +1,143 @@
+  <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+        </style>
+    </head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>Heat Transfer: Heat Sink Design Project</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <img src="heatTransfer1.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> This project was a two-part project for my Heat Transfer class that I took during my Junior year at RPI. It involved designing a heat sink and finding a corresponding fan for the system to maintain a Thyristor within certain thermal constraints. For the first part of the project, a heat sink was designed to satisfy the thermal constraints of the system. The design shown above was used, with the heat sink deploying 81 pins in a 9x9 array to effectively cool the Thyristor using convective heat transfer.   </p>
+                <img src="heatTransfer2.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%"
+                <p> The diagram above shows the resistance circuit that models the Thyristor system. It depicts how heat from the system travels from the Thyristor (Tvj) to the heat sink(Tbo) through conduction and then leaves the system via convection. The lumped capacitance method was used for the transient thermal analysis and radiation and conduction in the system were neglected. The system was then solved with these assumptions. Steady-state analysis used standard pin-fin array equations. While the transient analysis used the simplified transient conservation of energy equation to determine the temperature of the system and validate the system design. </p>
+                <img src="heatTransfer3.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> The second part of the project used the heat sink design to find a fan that could be used to satisfy conditions assumed during the project. An iterative approach was used to solve for the fan properties. An initial air velocity guess was used and then the dimensionless Reynolds number, Prandtl number, and Nusselt number were calculated iteratively until the values stabilized to achieve more accurate results. The required volumetric flow rate and pressure drop of the fan were then calculated, and a fan was selected to satisfy these requirements. The fan we chose is shown above.  </p>
+                <p> We then used the heat flux equation and the conservation of energy equation to determine the relationship between the fan power and h, the convective heat transfer coefficient, and the relationship between the volumetric flow rate and h. The plots are shown below. They demonstrate that the convective heat transfer coefficient that we used for our calculations is within the limitations of the fan we selected for our system. </p>
+                <img src="heatTransfer5.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <img src="heatTransfer6.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p>Videos covering the project in greater detail:  </p>
+                <a href="https://www.youtube.com/watch?v=H3GpjlyRmQA" target="_blank">Video 1 </a>
+                <br>
+                <a href="https://www.youtube.com/watch?v=1c9jU6fc-rg" target="_blank"> Video 2 </a>
+                <hr class="w3-opacity">
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email 1 (preferred contact method): <strong>michael.aksen@gmail.com</strong> <br>
+                Email 2: <strong>aksenm@rpi.edu</strong> <br>
+                Phone #: <strong>201-982-1776</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

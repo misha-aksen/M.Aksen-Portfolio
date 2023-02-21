@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+        </style>
+    </head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+        <!-- Photo grid -->
+        <h2> <center>Project Portfolio </center></h2>
+        <br>
+        <div class="container">
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='airplaneproject.html' "> 
+                <img src="airplane1.png" alt="Airplane" style="width:100%;" />
+            </button>
+            <div class="centered">Airplane Manufacturing Project</div>
+        </div>
+        <br>
+        <div class="container">
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='bandsawProject.html' "> 
+                <img src="bandsaw1.jpg" alt="Bandsaw" style="width:100%;" />
+            </button>
+            <div class="centered">Bandsaw PLC Integration Project</div>
+        </div>
+        <br>
+        <div class="container">
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='heattransferproject.html' "> 
+                <img src="heatTransfer2.png" alt="Heat Transfer" style="width:100%;" />
+            </button>
+            <div class="centered" style="top:20%" >Heat Transfer: Heat Sink Design Project</div>
+        </div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h4><b>About Me</b></h4>
+            <img src="portrait-min.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h4>Michael Aksen</h4>
+                <p> Ever since I was little, my grandpa would show me all the different inventions he had sketched out. From something small like a tool to pick up dog poop, to a revolutionary idea for an air-powered vehicle, he was always crafting things and I was always helping him. He was a manufacturing engineer in the Soviet Union, but because of the language barrier, he had to forego his engineering pursuits to provide for his family. However, I hope that his engineering dreams can be fulfilled vicariously through my engineering accomplishments. 
+<br>    Studying at RPI opened my mind to all the different engineering opportunities available to me. What drew me to manufacturing was seeing how much the field can still grow. I always thought it was cool to build stuff and I was always interested in the latest advancements in technology, but once I came to RPI I saw how those two fields could mesh. Industry 4.0 is the future of manufacturing, and I want to be a part of that future. Additive Manufacturing, CNC machining, FEA, and Automation are all fields that I am captivated by and hope to pursue through classes at RPI and later as a career in industry. I care about innovation and the future of manufacturing, and I hope to drive change in that field of engineering. For example, I envision a prototyping shop with CNC machines all interconnected through the cloud. They would be controlled by a master algorithm that determines how to make any part and sends instructions to the automated machines through an assembly-line format. 
+<br>    In my free time, I enjoy being outdoors. I recently completed the Devil's Path hike and the Presidential Traverse, two of the most difficult hikes on the East Coast. I hope to continue pushing myself physically as well as mentally through my extracurricular pursuits. I love to ski and play basketball. Finding new challenges to tackle and pushing myself to excel drives me to be better at these sports. I am also passionate about adventure and exploring the world. This summer, I plan to go on a several month roadtrip across the country to explore many of the untouched corners of America and hopefully understand myself better along the way. Other than outdoorsy pursuits, I also love to spend time indoors and either play boardgames with my friends or continue watching Naruto or playing my endless strategical campaign in Rome: Total War.
+                </p>
+                <hr class="w3-opacity">
+                
+                <h4 class="w3-padding-16">Technical Skills</h4>
+                <p class="w3-wide">Programming</p>
+                <p>Java, Python, MATLAB, Arduino C++, LaTeX, SQL</p>
+                <!--<p><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom"> <a href="Resume.pdf" download="Resume">Download Resume</a></button></p>
+                -->
+                <p class="w3-wide">Software</p>
+                <p>NX, NX Nastran, SolidWorks, PLC Ladder Logic, Octopuz, Mastercam </p>
+                <p class="w3-wide">Manufacturing</p>
+                <p>Manual Machining, 3D Printing, MIG Welding, Waterjet </p>
+                <p class="w3-wide">Other Skills</p>
+                <p>Value Stream Mapping, Design for Manufacturability (DFM) </p>
+
+                <h4 class="w3-padding-16">Awards</h4>
+                <p class="w3-wide">FE Certified</p>
+                <p class="w3-wide">'21 Gene Haas Manufacturing Award Recipient</p>
+                <p class="w3-wide">'20 RPI Elevator Pitch Competition 3rd Place</p>
+
+                <button type="submit" onclick="window.open('./Resume.pdf')" class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button><hr class="w3-opacity">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email 1 (preferred contact method): <strong>michael.aksen@gmail.com</strong> <br>
+                Email 2: <strong>aksenm@rpi.edu</strong> <br>
+                Phone #: <strong>201-982-1776</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
