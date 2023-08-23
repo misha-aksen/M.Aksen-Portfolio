@@ -1,0 +1,150 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>Atomic Orbital Kinematics</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <p> I initially came up with this topic by recognizing the similarities between space orbitals, with satellites orbiting planets, and atomic orbitals, with electrons orbiting the atomic nucleus. Extending this idea further, is it possible that an atomic orbital itself is a reflection of a planetary orbit and there is an entire universe inside an atom? Also, it is noteworthy that the Coulomb law dictating electromagnetic forces in an atomic orbital resembles the Law of Universal Gravitation dictating gravitational forces in a planetary orbit.   </p>
+                <img src="sfm/sfm1.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> For this project, the hydrogen atom with one proton and one electron was modelled. Therefore, the two-body problem studied in Spaceflight Mechanics was applied as there are only two bodies of interest in the hydrogen atomic orbital. The two-body problem outlines a derivation of the orbital kinematics of two bodies that are only affected by the gravitational forces acting on one another. Atomic orbitals operate as a result of the electromagnetic force rather than the gravitational force. Therefore, Coulomb’s Law, which dictates the effect of the electromagnetic force, must replace Newton’s Law of Universal Gravitation.  </p>
+                <img src="sfm/sfm2.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> With this new fundamental law, the Equations of Motion (EoM) which govern the kinematics of the atomic orbital were revised. The proton was assumed to be stationary so the orbital kinematics could be expressed in the Proton-Centered Inertial (PCI) frame. The form was then simplified because it is known that mass_electron << mass_proton. Afterward, a proton-to-electron mass ratio, μ, was established. In addition, the charge of the electron and proton is known to be equivalent. Therefore, q_electron=q_proton=q. Subsequently, a standard electrostatic constant, ν, was derived where m1 = m_proton. </p>
+                <img src="sfm/sfm3.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> Finally, shown below is the governing equation of motion for the atomic orbital, where r is the position of the electron in the PCI frame:</p>
+                <img src="sfm/sfm4.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> The system was modelled and simulated in MATLAB using the State-Space formulation of the 2nd order ODE shown above and then numerically propagated using the ode45 numerical solver. Modeling the hydrogen atomic orbital in MATLAB was difficult because the system was very prone to instability and using numbers that were slightly off would either cause the electron to crash into the proton or the electron would be ejected outside of the orbital domain. Therefore, a lot of calibration was required to make the system relatively stable. The figures below show the orbit of the electron when the velocity is either too high or too low: </p>
+                <img src="sfm/sfm5.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <img src="sfm/sfm6.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> However, after some calibration I found that an initial velocity of 2x10^6  (nm/ns)=2000 (km/s) keeps the system relatively stable. The figure below shows the system propagated for 0.05 pico seconds. The proton is scaled by a factor of 10^4 so its relative position would be visible: </p>
+                <img src="sfm/sfm7.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> From a cited source, the approximate velocity of an electron in the first energy level of a hydrogen atom was shown to be 2.19x10^6  m/s  . This demonstrates that using the derived EoM, one can computationally determine the approximate velocity of an electron in a stable orbit to within 8.7% of the agreed upon value using the two-body approximation and the ode45 numerical solver.  </p>
+                <p> There are several distinct limitations of the methods in this paper to describe the hydrogen atomic orbital. An electron travels at a fraction of the speed of light which causes relativistic effects that distort Newtonian Mechanics. In addition, in quantum mechanics, an electron’s position is never definitively known. Rather its position is expressed as a probabilistic time-dependent wave function, so validating the methods described in this paper may not be possible. Despite the academic community discarding the Sommerfeld-Bohr planetary atomic model, I think it is still interesting to explore how the electron’s true behavior contrasts its expected behavior from classical mechanics. I also thought it was interesting how the numerical results came within 9% of the true velocity of the electron in a hydrogen atomic orbit. </p>
+                <p> The final report for the project can be found here:  </p>
+                <a href="https://drive.google.com/file/d/1ZUBfLXjQHi6v-5sQHDwz8BKS6I2Jb1j3/view?usp=sharing"  target="_blank" >Final Report </a>
+                <hr class="w3-opacity">
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email (preferred contact method): <strong>michael.aksen@gmail.com</strong> <br>
+                Phone #: <strong>201-982-1776</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
