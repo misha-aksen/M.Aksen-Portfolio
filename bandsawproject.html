@@ -1,0 +1,170 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>Upgrading a 50-year-old Industrial Bandsaw to the Digital Age</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <p> For my Masters project, I worked on remodeling a 50-year-old industrial bandsaw by adding computer control and data analytics to the machine for operational improvements.    </p>
+                <img src="saw/saw1.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <img src="saw/saw2.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <img src="saw/saw3.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <img src="saw/saw4.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> The bandsaw was owned and operated by The Factory Amsterdam, an RPI Startup in the manufacturing industry.  </p>
+                <img src="saw/saw5.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> The Invent @ Rensselaer Startup Immersion Program worked with the RPI SMIC (Smart Manufacturing Innovation Center) to develop a project that was sponsored by CESMII because of its integration of the CESMII Smart Manufacturing Innovation Platform (SMIP) into the operations of a small manufacturer, a fundamental part of CESMII’s smart manufacturing initiatives. The SMIP is a data historian and visualization application that allows for data producers such as industrial machinery to connect to it via standardized communication protocols, manage their data, and visualize data insights.</p>
+                <img src="saw/saw6.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> The goal of the project was to make the bandsaw machine more reliable when used and to reduce downtime when maintenance was inevitably needed. I worked on the project in Amsterdam, NY in an old industrial building.</p>
+                <img src="saw/saw7.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <img src="saw/saw8.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <img src="saw/saw9.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> With a great view of the town and the Mohawk River. </p>
+                <img src="saw/saw10.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> I worked alongside seven of my peers in an old factory building, working towards the same goal of becoming an independent manufacturing enterprise that would allow everyone to sync their interests with work that would benefit the company. </p>
+                <img src="saw/saw11.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> But while they worked solely for the benefit of the company, my project over the summer of 2022 had a growing list of deliverables that needed to be achieved for several different parties. Dr. Ghosh, as my Coterm advisor, expected my work to involve operational methods that he taught us in the Inventors Studio courses. Craig Dory, the director of the Regional CESMII group and the financial sponsor of the project, expected smart manufacturing developments that would benefit the small manufacturer I was working with, a long sought after yet rarely achieved goal in the Smart Manufacturing community. TFA, as the owners of the machine, expected an improved machine with better reliability and improved operational capabilities. RTA, a smaller sponsor of the project who provided an industrial protocol device for the project, expected an industrial networking article discussing the accomplishments of the project (linked below).  </p>
+                <a href="https://www.rtautomation.com/case-studies/the-factory-amsterdam/" target="_blank"> RTA Article</a>
+                <img src="saw/saw12.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> So, there were a lot of deliverables to juggle as the project progressed. I began with no knowledge of PLCs (programmable logic controllers), industrial communication, or how to work with industrial machinery. Over the course of two summers and intermittent work over the school year, I was able to install the PLC onto the machine, rewiring all the electrical logic and signals of the machine through the PLC, and maintain the operational logic of the machine.</p>
+                <img src="saw/saw13.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> This process seemed daunting at first, but every milestone and challenge was overcome through persistence and collaboration with my peers. The project demanded a lot of independent study and discovery, so it was very helpful to have peers around me to consult when I encountered difficult challenges. It was also helpful that I had experience working with industrial machinery in the MPS I and II classes. The Inventors Studio course also helped me grasp a higher-level understanding of the effect of my project on the operations of the company and demonstrate my projects impact to interested parties. In addition, I took the Multidisciplinary Capstone Design course last year and was placed in the Smart Manufacturing project group. This gave me a head start in understanding key smart manufacturing concepts and gave me preliminary experience working with the SMIP system that I utilized during my project.  </p>
+                <p> One interesting side project was collecting band speed measurements from the machine. The machine had a gauge that showed its band speed, but since it served no purpose in the logic of the machine its circuit was localized to the user control box. After some investigation, I found that the gauge was an electric gauge that was calibrated to a DC voltage value. A tachogenerator was used to convert the rotation of the band wheel that drove the saw of the machine to an AC voltage. This was connected to a rectifier circuit in the user control box to convert to a DC voltage that was then displayed as a band speed in FPM (feet per minute) on the display gauge. In order to collect this data, I purchased an analog input module that could read DC voltage at the appropriate range. I then rewired the rectifier circuit inside the PLC electrical box and connected the analog module to collect the DC signal. Afterwards, the signal was calibrated on the software side to display an accurate band speed.  </p>
+                <p> After I rewired the machine to PLC logic, I began working on integrating the machine to the SMIP. This process also had its challenges as the IT/OT gap is notoriously difficult to bridge. After failing to integrate a module that was purchased from Italy, I contacted John Rinaldi, the founder and CEO of RTA, an industrial communications expert. They agreed to provide an appropriate protocol gateway pro bono for my project. This protocol gateway converted serial signals that the PLC would send out to data objects that followed the standardized language model that the SMIP used, OPC-UA.  </p>
+                <img src="saw/saw14.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> This allowed for the signals from the bandsaw machine to be modelled as structured data on the SMIP. A novel data model using a UML diagram and a Fishbone diagram was developed to describe the operational functionality of the saw. A data connection was also successfully achieved between the machine and the SMIP, and preliminary data was sent through before The Factory Amsterdam had to go through an extended process of moving to a new facility.  </p>
+                <img src="saw/saw15.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> Although the projects deliverables were cut short because of the move, future work can be performed to actualize more results from the project. Future projects include developing a dashboard to interact with the machines operator and show important attributes to the operator, installing a current transducer to measure power consumption of the machine, and exploring cut quality and developing a predictive maintenance schedule for the machine using acoustic sensor data. The project did have some meaningful results. The machine has become easier to maintain with a well documented SOP and the PLC software that makes debugging issues a lot easier. Also, the machine is now in a state where it has a much greater potential for future research and improvements. Furthermore, the machine now has a greater capacity for operational optimization and the diagram below shows the difference in cut quality after the machine’s parameters are optimized for the particular stock that is being cut. This demonstration shows how important it is for the machines operator to be able to capture optimal parameters for repeatable future results. This task can only be actualized as a result of the manufacturing and smart manufacturing improvements made to the machine through this project. </p>
+                <img src="saw/saw16.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> The effect above can be achieved by developing an understanding of the effect of various machine attributes on the operational parameters of the machine. These effects are summarized in the process control table, which shows how various collected machine attributes can affect the operational parameters of the machine.  </p>
+                <img src="saw/saw17.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p> After working on this project, I feel confident that I can take on any engineering challenge. This project taught me about how to learn independently, when and how to ask others for help, and it reaffirmed my own abilities and what I’m capable of doing. It also helped me understand my own interests and what I’d like to work on in the future. RPI overall has given me a great foundation to pursue a career in manufacturing. The experience I gained from the manufacturing classes at RPI such as MPS I and II, IS 2 and 3, AMPs, Analysis of Manufacturing Processes, etc.. have given me a great understanding of the manufacturing field and have equipped me to tackle any engineering challenges that I will encounter during my career. Furthermore, this project has given me invaluable experience working on industrial machinery and provided an immersive understanding of smart manufacturing applications and the world of the manufacturing industry. </p>
+                <p> Here I show a video tour of the bandsaw and my associated project: </p>
+                <a href="https://youtu.be/lNWObkcOICw?si=JTY8bpfwyfL40y4D" target="_blank"> Bandsaw Video Tour </a>
+                <p> And a video of the saw in operation: </p>
+                <a href="https://www.instagram.com/p/CT7ZDp7rv_N/?img_index=1" target="_blank"> Bandsaw Sample Cut </a>
+                <hr class="w3-opacity">
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email (preferred contact method): <strong>michael.aksen@gmail.com</strong> <br>
+                Phone #: <strong>201-982-1776</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
