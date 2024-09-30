@@ -49,6 +49,32 @@
             }
         </style>
     </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+    if (localStorage.getItem("index.html-quote-scroll") != null) {
+        $(window).scrollTop(localStorage.getItem("index.html-quote-scroll"));
+    }
+
+    $(window).on("scroll", function() {
+        localStorage.setItem("index.html-quote-scroll", $(window).scrollTop());
+    });
+
+  });
+</script>
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
     <!-- Sidebar/menu -->
@@ -85,7 +111,7 @@
             <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='airplaneproject.html' ">
                 <img src="air/airplane1.png" alt="Airplane" style="width:100%;" />
             </button>
-            <div class="centered">Santa's Toy Airplanes</div>
+            <div class="centered">Manufacturing 300 Toy Airplanes</div>
         </div>
         <br>
         <div class="container">

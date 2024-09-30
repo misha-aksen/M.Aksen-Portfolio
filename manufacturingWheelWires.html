@@ -1,0 +1,204 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>M.Aksen Project Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Rale way", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./airplaneproject.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>Project Overview: Manufacturing Wheel Wires</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h3><b>Objective:</b></h3>
+                <p> Develop a manufacturing process to produce 300 wheel wires, utilizing 1/8” 304 stainless steel to leverage its durability, weight, and corrosion resistance.</p>
+                <img src="air/airplane9.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <h3><b>Collaboration:</b></h3>
+                <p> Partnered with a peer to accelerate the design and manufacturing process, ensuring efficiency and effectiveness in execution. </p>
+                <h3><b>Manufacturing Process:</b></h3>
+                <p><b>  1.	Wire Preparation:</b></p>
+                <ul>
+                    <li>	We initiated the process by cutting the stainless steel wire to the specified length using a Foot Shear.</li>
+                    <li>	To enhance safety and prevent sharp edges, we ground the wire ends with a grinding machine.</li>
+                </ul>
+                <p><b>  2.	Bending Operation:</b></p>
+                <ul>
+                    <li>	The wires were bent to their required configuration using an Arbor Hand Press.</li>
+                    <li>	Despite the small diameter of the wire, bending small radii proved challenging and required significant force. Our initial design aimed to bend multiple wires simultaneously; however, practical trials led us to focus on one wire at a time due to equipment limitations.</li>
+                </ul>
+                <p><b>  3.	Die Design:</b></p>
+                <ul>
+                    <li>	We created a base die and a moving die: the base die secured the wire, while the moving die pressed down to achieve the desired shape.</li>
+                    <li> 	Key design features included:
+                        <ul>
+                            <li>	An alignment wall to stabilize the wire during bending.</li>
+                            <li>	A shim within the base die to add slight spacing between the moving die and the walls of the base die, ensuring a secure fit without friction.</li>
+                            <li>	An extension lever on the arbor press to increase the applied bending force.</li>
+                            <li>	An alignment bracket to keep the wire locked in and improve bending accuracy.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <img src="air/airplane4.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <img src="air/airplane39.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p><b>  4.	Quality Control:</b></p>
+                <ul>
+                    <li>	Two quality control gauges were laser-cut & used to check that the bent wheel wire would meet the specifications of the design</li>
+                    <li> 	A general quality control gauge block was designed to check that the wheel wire generally lined up to its expected contour, with an acceptable 0.06” surface parallelism constraint between the flat ends of the wire </li>
+                    <li>	A top arc quality control gauge block was used to check that the critical top arc would satisfy the tolerance requirements. The gauge was designed to check for a 0.03” surface parallelism constraint between the top arcs on both sides of the wheel wire.</li>
+                </ul>
+                <img src="air/airplane12.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <img src="air/airplane13.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <p><b>  5.	Challenges and Solutions:</b></p>
+                <ul>
+                    <li>	We encountered springback issues, where wires did not achieve the desired bend. To counter this, we adjusted the die design to intentionally overbend the wires using the Springback equation, anticipating the springback effect.</li>
+                    <img src="air/airplane14.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <li>	Force requirements exceeded our simulations by more than double due to the absence of spacing between the moving and base dies, causing unintended shearing. We introduced tolerances in the dies to alleviate this issue, sacrificing minimal accuracy for improved functionality. The die clearance equation was used to calculate the tolerances needed. </li>
+                    <img src="air/airplane15.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <img src="air/airplane11.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <img src="air/Picture9.gif" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                </ul>
+                <h3><b>Results:</b></h3>
+                <p>Ultimately, we successfully manufactured 360 wheel wires—60 additional units were produced to account for a scrap rate of up to 20%</p>
+                <h3><b>Documentation:</b></h3>
+                <p>A comprehensive digital work instruction was developed in VKS, detailing each step of the process. This documentation enabled our peers, unfamiliar with the method, to produce wires consistently.</p>
+                <h3><b>Manufacturing Techniques:</b></h3>
+                <p>Key equipment used included a waterjet, lathe, mill, and drill press.</p>
+                <h3><b>Future Improvements:</b></h3>
+                <p>While the project was successful, several areas for improvement were identified:</p>
+                <ul>
+                    <li>	Using tool steel for die construction to mitigate wear of the bending die.</li>
+                    <li>	Utilizing a hydraulic press to improve consistency and reduce operator strain, as some faced challenges with manual operation.</li>
+                    <li>	Transitioning to a progressive die to lower the force required for bending, enhance accuracy, and improve repeatability.</li>
+                </ul>
+                <hr class="w3-opacity">
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email (preferred contact method): <strong>michael.aksen@gmail.com</strong> <br>
+                Phone #: <strong>201-982-1776</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

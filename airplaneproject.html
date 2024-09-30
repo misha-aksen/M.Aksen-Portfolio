@@ -18,7 +18,7 @@
             font-size: 30px
             }
         </style>
-        <title>W3.CSS Template</title>
+        <title>M.Aksen Project Portfolio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -48,6 +48,33 @@
             }
         </style>
     </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+    if (localStorage.getItem("airplaneproject.html-quote-scroll") != null) {
+        $(window).scrollTop(localStorage.getItem("airplaneproject.html-quote-scroll"));
+    }
+
+    $(window).on("scroll", function() {
+        localStorage.setItem("airplaneproject.html-quote-scroll", $(window).scrollTop());
+    });
+
+  });
+</script>
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
     <!-- Sidebar/menu -->
@@ -75,41 +102,58 @@
         <!-- Push down content on small screens -->
         <div class="w3-hide-large" style="margin-top:83px"></div>
 
+        <!-- Photo grid -->
+        <h1> <center>Airplane Manufacturing Project</center></h1>
+        <div class="w3-content w3-justify" style="max-width:600px">
+            <p>This project was part of the Manufacturing Processes and Systems (MPS) Lab I and II courses at RPI. Our task was to design, manufacture, and assemble 300 toy planes as part of a 12-person team. A CAD model of the completed airplane is shown below along with a diagram labelling all the components of the airplane.</p>
+            <br>
+            <img src="air/airplane2.png" alt="Airplane" style="width:100%;margin-bottom: 20px" />
+            <img src="air/airplane38.png" alt="Airplane" style="width:100%;margin-bottom: 20px" />
+            <p>My first task was to develop a method to manufacture 300 wheel wires. Select the picture below to read about this subproject.</p>
+            <br>
+        </div>
+        <div class="container w3-justify w3-content" style="max-width:800px">
+            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='manufacturingWheelWires.html' ">
+                <img src="air/wheelWirePicture.jpg" alt="Airplane" style="width:100%;" />
+            </button>
+            <div class="centered w3-text-black" style="top:30%; left:47%;font-size:xx-large">Manufacturing Wheel Wires</div>
+        </div>
+        <br>
+        <div class="w3-content w3-justify" style="max-width:600px">
+            <p>After the wheel wires were manufactured, I was tasked with developing an effective method to assemble sets of wheels onto each of the 300 wheel wires. Select the picture below to read about this subproject.</p>
+            <br>
+        </div>
+        <div class="container w3-content" style="max-width:800px">
+            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='assemblingWheelWires.html' ">
+                <img src="air/airplane3.png" alt="sfm" style="width:100%;" />
+            </button>
+            <div class="centered w3-text-black" style="top:17%;font-size:xx-large">Assembling Wheel Wires</div>
+        </div>
+        <br>
+        <div class="w3-content w3-justify" style="max-width:600px">
+            <p>After completing the wheel wire assembly process, I volunteered to help with the robotic assembly of the wing and horizontal stabilizer halves. Select the picture below to read about this sub-project. </p>
+        </div>
+        <div class="container w3-content" style="max-width:800px">
+            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='roboticAssembly.html' ">
+                <img src="air/airplane6.png" alt="sfm" style="width:800px;" />
+            </button>
+            <div class="centered w3-text-light-grey"  style="font-size:xx-large">Robotic Assembly</div>
+        </div>
+        <br>
+        <div class="w3-content w3-justify" style="max-width:600px">
+            <p>Through this project, I learned design for manufacturing (DFM) techniques and gained experience using various industrial machines such as Injection Molders, CNC machines, and pick-and-place robots. I also developed engineering, management, and interpersonal skills that are needed to design and manufacture a product in high-volume as part of a large & diverse team. </p>
+            <p>An example of a finished plane and a stack of packaged planes can be seen below.</p>
+            <br>
+            <img src="air/airplane1.png" alt="sfm" style="width:100%;margin-bottom:25px" />
+            <img src="air/airplane7.jpg" alt="sfm" style="width:100%;" />
+            <p>To view our final presentation slides, follow this link:</p>
+            <a href="https://docs.google.com/presentation/d/1V0BgRuUyCuC6IR2SebcDDpNKARiusjglPWXvmfJHCUE/edit">Final Presentation</a>
+            <p>For a more detailed and structured explanation of our project, follow this link to our Technical Data Package (TDP): </p>
+            <a href="https://docs.google.com/document/d/1xqoKYk_RERJSOTtX4qEVpdSDz2FwzdJKBAWqe3AfvwY/edit?usp=sharing">MPS Spring 2022 Plane TDP</a>
 
-        <!-- Modal for full size images on click-->
-        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                <img id="img01" class="w3-image">
-                <p id="caption"></p>
-            </div>
         </div>
 
-        <!-- About section -->
-        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
-            <h2><b>Airplane Manufacturing Project</b></h2>
-            <div class="w3-content w3-justify" style="max-width:600px">
-                <p> Our project was commissioned by Mr. Santa Claus, who needed RPI expertise to manufacture 300 toy airplanes within a semester. This project was developed as part of the Manufacturing Processes and Systems (MPS) Lab I and II courses at RPI. Our task was to design and manufacture 300 toy planes as part of a 12-person team. The objective of these courses is to teach students Design for Manufacturing techniques, provide experience using industrial machines such as Injection Molders, CNC machines, and Pick-and-Place robots, and develop skills to design and manufacture large quantities of a product, including engineering, management, and teamwork skills.   </p>
-                <p> For the Fall semester when I took MPS I, my team designed a plan to manufacture 300 toy rockets. However, our group was not chosen to continue the project in the spring, so I was placed on the Airplane team for MPS II. A CAD model of the completed airplane is shown below along with a diagram labelling all the components of the airplane. </p>
-                <img src="air/airplane2.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="air/airplane8.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> My first task was to design tools to manufacture 300 wheel wires. The wheel wire in its desired final state is shown below. </p>
-                <img src="air/airplane3.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="air/airplane4.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> I worked on this task with a peer to accelerate the process. We decided to manufacture the wheel wires out of 1/8” 304 Stainless Steel for its sturdy characteristics, weighted feel, and resistance to corrosion. The first operation we performed was to cut the wires to length using a Foot Shear. The wire ends were then rounded using a grinding wheel. Then we decided to bend the wires to their desired state using an Arbor Hand Press. We designed a die to contain the wires during the bending process, robustly and efficiently secure the wires in the die, and easily press them using the Arbor press lever arm. We used a Waterjet and a mill and lathe to machine the die. After several prototypes, and correcting for spring-back and other complications, we developed a die that was used to bend 300 of the wires. However, the die slowly eroded by the end of the process and the final wires were not produced nearly as correctly as the initial wires. Future improvements would need to have been made to make the process more repeatable, such as modifying the process into a two-step bending operation, using tool steel rather than mild steel for the die, and using a hydraulic press to automate the operation. </p>
-                <img src="air/airplane5.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> After the wires were bent, the wheels needed to be securely attached to the wire. We found that using a drill press chuck to press the push nuts onto the wire was the most effective method because of its rapid processing time, so we designed an assembly die to secure the wheel wires for the assembly process. The design employed an alignment block to align the wheels and the push nuts to the wire and an assembly die to fix the wire during the assembly. We used an FDM printer to manufacture the dies because of the complicated nature of the design. As a result, the alignment block fractured once and needed to be replaced. The 300 wheel wire assemblies were assembled without much issue, but the process took longer than desired, with each assembly taking around 1 minute to complete. Future implementations would either manufacture the alignment block out of a more durable plastic or it would need to be optimized with thicker extrusions to withstand the forces of the assembly process. </p>
-                <img src="air/airplane6.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> After our team was finished manufacturing the wheel wire assemblies, our next task was to ultrasonically weld the two halves of the injection molded wings and horizontal stabilizers of the airplane together. We envisioned using pick-and-place robots to perform the task, but problems with consistency gave us trouble. Even slight perturbations in the process would cause it to fail. However our team was determined, and after tuning the assembly fixtures and everything involved in the process, we ended up with a relatively robust process, with the automated operation successfully assembling approximately 85% of the parts. However, the process needed to be slow, so in the end a combination of manual and automated labor sped up the process to finish within a set timeline. Pictured above is the fixture used to maintain the initial positions of the injection molded wings that were then picked up by the robot end effector.  </p>
-                <p> An example of a finished plane and a stack of packaged planes can be seen below. </p>
-                <img src="air/airplane1.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="air/airplane7.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> For more information follow this link: </p>
-                <a href="https://docs.google.com/presentation/d/1V0BgRuUyCuC6IR2SebcDDpNKARiusjglPWXvmfJHCUE/edit?usp=sharing" target="_blank"> Final Presentation </a>
-                <hr class="w3-opacity">
-            </div>
-        </div>
-        <!-- Contact section -->
+                <!-- Contact section -->
         <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
             <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
                 <h4 class="w3-center"><b>Contact Me</b></h4>
@@ -118,9 +162,6 @@
                 </p>
             </div>
         </div>
-
-        <!-- End page content -->
-    </div>
 
     <script>
         // Script to open and close sidebar
