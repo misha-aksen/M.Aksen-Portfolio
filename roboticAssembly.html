@@ -102,13 +102,13 @@
             <div class="w3-content w3-justify" style="max-width:600px">
                 <h3><b>Objective:</b></h3>
                 <p> To develop a robotic assembly process to ultrasonically weld wing and horizontal stabilizer halves using a pick-and-place robot and an ultrasonic welder. </p>
-                <p> Note: For some reason we did not take a video of the robotic assembly process or I just can't find it, but this video demonstrates many of the concepts discussed below. This includes our pallet design, end effector design, 3-2-1 fixturing, and the general orientation of all the components in the workspace. It also hints at some of the issues we struggled with such as the shifting of the pallet and wings as the end effector presses down to pickup parts and the issue with suction timing so that the end effector would consistently pick up a part without dropping it.</p>
+                <p> Note: For some reason we did not take a video of the robotic assembly process or I just can't find it, but this video demonstrates many of the concepts discussed below. This includes our pallet design, end effector design, 3-2-1 fixturing, and the general orientation of all the components in the workspace. It also hints at some of the issues we struggled with such as the shifting of the pallet and wings as the end effector presses down to pickup parts and the issue with suction timing so that the end effector would consistently pick up parts without dropping them.</p>
                 <video width="100%" height="100%" controls>
                     <source src="air/robotVideo.mp4" type="video/mp4">
                     Your browser does not support this video
                 </video>
                 <h3><b>Collaboration:</b></h3>
-                <p> Upon starting, I consulted with our manufacturing shop supervisor, who highlighted the difficulties associated with robotic assembly, noting that the robot’s lack of adaptability meant that even minor changes in the environment could disrupt the operation. To save time, he suggested treating the robotic assembly as a case study and performing the bulk of the assembly manually. Rather than seeing this as a setback, I embraced it as a challenge and committed to making the robotic process work, dedicating myself to daily work in the shop. My dedication inspired several peers to join me, leading to a collaborative effort. We embraced a continuous improvement methodology, incrementally refining our approach in order to achieve better results. </p>
+                <p> Upon starting, I consulted with our manufacturing shop supervisor, who highlighted the difficulties associated with robotic assembly, noting that the robot’s lack of adaptability meant that even minor changes in the environment could disrupt the operation. To save time, he suggested treating the robotic assembly as a case study and performing the bulk of the assembly manually. Rather than seeing this as a setback, I embraced it as a challenge and committed to making the robotic assembly process work, dedicating myself to daily work in the shop. My dedication inspired several peers to join me, leading to a collaborative effort. We embraced a continuous improvement methodology, incrementally refining our approach in order to achieve better results. </p>
                 <h3><b>Robotic Assembly Process for Wings (identical for horizontal stabilizers)</b></h3>
                 <p><b>  1.	Preliminary Inspection: </b></p>
                 <ul>
@@ -121,7 +121,7 @@
 
                 <p><b>  3.	Pallet Design:</b></p>
                 <ul>
-                    <li>	Each pallet held 30 wing-halves, arranged in three stacks of ten, utilizing press-fit pins and rods for alignment. We employed the 3-2-1 fixturing method to stabilize the pallets on the worktable, ensuring the pallets were consistently located during assembly.</li>
+                    <li>	Each pallet held 30 wing-halves, arranged in three stacks of ten, utilizing press-fit pins and rods for alignment. We employed the 3-2-1 fixturing method to place the pallets on the worktable, ensuring the pallets were consistently located during assembly.</li>
                 </ul>
                 <img src="air/airplane29.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
                 <img src="air/airplane6.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
@@ -129,7 +129,7 @@
                 <img src="air/airplane34.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
                 <p><b>  4.	Robot Specifications:</b></p>
                 <ul>
-                    <li>	The Adept Cobra 800 pick-and-place robot was programmed using V+, an assembly language. We also used a control board to operate the robot manually. We designed a custom end effector with vacuum suction cups to pick-up parts, and added extended arms to adjust for extremely limited space when interacting with the ultrasonic welder.</li>
+                    <li>	The Adept Cobra 800 pick-and-place robot was programmed using V+, an assembly language. We also used a control board to operate the robot manually. We designed a custom end effector with vacuum suction cups to pick-up parts, and added extended arms to adapt to extremely limited space constraints within the ultrasonic welder workspace.</li>
                 </ul>
                 <img src="air/airplane33.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
                 <img src="air/airplane36.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
@@ -139,7 +139,7 @@
 
                 <p><b>  5.	Welding Fixture: </b></p>
                 <ul>
-                    <li>	Designed with chamfered locator pins - the welding fixture minimizes potential errors by accommodating slight misalignments in part placement.</li>
+                    <li>	Designed with chamfered locator pins - the welding fixture minimized potential errors by accommodating slight misalignments in part placement.</li>
                 </ul>
                 <img src="air/airplane25.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
                 <img src="air/airplane26.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
@@ -165,7 +165,7 @@
                 <img src="air/airplane32.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
                 <h3><b>Results:</b></h3>
                 <p>We successfully welded over 600 wings, achieving a 95% success rate once the assembly process was established. While a higher success rate is necessary for full automation in an industrial setting, our results were satisfactory in demonstrating an implementation of robotic assembly.</p>
-                <p>This experience highlighted the importance of continuous improvement in robotic assembly processes. We carefully addressed every potential source of error, and although there were areas for future improvement—such as redesigning the pallet to adapt to deviations in the wing placement—our project successfully combined manual and automated techniques to meet tight deadlines.</p>
+                <p>This experience highlighted the importance of continuous improvement in robotic assembly processes. We carefully addressed every potential source of error, and although there are areas for future improvement, our project successfully combined manual and automated techniques to meet tight deadlines.</p>
                 <h3><b>Documentation:</b></h3>
                 <p>Developed comprehensive digital work instructions in VKS, detailing each step of the assembly process. </p>
                 <h3><b>Manufacturing Techniques:</b></h3>
@@ -176,7 +176,7 @@
                     <li>	Redesigning the pallet to minimize shifts in the stacked parts</li>
                     <li>	Redesigning the end effector for better self-correction and to reduce the drop height to the welding fixture </li>
                     <li>	Strategically speeding up actions of the automated operation to reduce time per assembly </li>
-                    <li>	Increase the rigidity of the end effector to mitigate vibration issues </li>
+                    <li>	Increasing the rigidity of the end effector to mitigate vibration issues </li>
                 </ul>
                 <hr class="w3-opacity">
             </div>
