@@ -1,0 +1,214 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>M.Aksen Project Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./bandsawproject.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>1. Planning & Integration</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <p>I began the project by completing the <a href="https://www.automationdirect.com/programmable-logic-controllers/plc-training" target="_blank">AutomationDirect PLC course</a> during the Summer of 2021 when I was an intern at TFA. I realized because of the age of the machine that the documentation for it was deteriorated and as a result practically illegible and unusable. I spent the next school year systematically documenting the electrical connections of every part of the machine and revising the corresponding logic and layout diagrams for the machine. I decided to commit the following summer to continue the project despite my uncertainty about the potential results. The first couple weeks of the summer of 2022 I spent completing documentation on the saw so that I could be sure the ladder logic I would code into the PLC would reflect the logic the machine actually used. </p>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw21.jpg' ">
+                     <figure>
+                        <img src="saw/saw21.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Documentation - Control Panel</figcaption>
+                    </figure>
+                </button>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw35.jpg' ">
+                     <figure>
+                        <img src="saw/saw35.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Electrical Layout Diagram - Pre-PLC</figcaption>
+                     </figure>
+                </button>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw36.jpg' ">
+                     <figure>
+                        <img src="saw/saw36.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Electrical Layout Diagram - Post-PLC</figcaption>
+                    </figure>
+                </button>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw37.jpg' ">
+                     <figure>
+                        <img src="saw/saw37.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Electrical Logic Diagram - Pre-PLC</figcaption>
+                    </figure>
+                </button>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw38.jpg' ">
+                     <figure>
+                        <img src="saw/saw38.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Electrical Logic Diagram - Post-PLC</figcaption>
+                    </figure>
+                </button>
+
+                <br>
+                <p>Once I was confident in my understanding of the machine’s inner electrical workings, I developed a plan to implement the PLC and ensure it was feasible given the limitations of the machine itself and the project’s budget.  The findings of the plan can be broken down into two central axioms. The first is to ensure that most signals passed through a central junction for seamless rewiring to the PLC. Of course, there were a few electrical components that had no presence in the control panel, and those required some creative rewiring, namely by hijacking other wires in their local junctions to receive the desired signals. However, the more localized control there was, the more difficult this type of project would have been, and if there had been a few more localized components the whole project could have been compromised. </p>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw20.jpg' ">
+                     <figure>
+                        <img src="saw/saw20.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Bandsaw - Control Panel</figcaption>
+                    </figure>
+                </button>
+                <p>The second axiom is budgeting the entire project and laying out how the PLC would be designed to ensure it would meet the demands of the project. Since my project was running on a tight budget, I worked with the AutomationDirect PLC configuration tool that showed the limitations of the CPU I would choose and how power from the PLC CPU would be allocated to the different components. This tool allowed me to plan out the input and output modules I would need for my project as well as check PLC characteristics I was interested in to fulfill my project deliverables. A price range of $3000 was established to set project constraints. The C2-03 CLICK PLUS CPU was chosen as a suitable PLC system with sufficient I/O ports with the appropriate signal types (AC/DC), adequate power output, and with technical attributes such as Wi-Fi and retentive memory. A preliminary networking architecture compatible with the PLC and the chosen cloud-based data historian was also designed. Afterwards, a Bill of Materials (BoM) and Work Plan were created to justify the project's timeline and financial investment. The BoM included PLC modules, necessary tools, and relevant equipment such as a NEMA certified electrical box and the protocol gateway that would be used for networking.</p>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw32.jpg' ">
+                     <figure>
+                        <img src="saw/saw32.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Bill of Materials</figcaption>
+                    </figure>
+                </button>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw31.png' ">
+                     <figure>
+                        <img src="saw/saw31.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>PLC Configuration</figcaption>
+                    </figure>
+                </button>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw29.jpg' ">
+                     <figure>
+                        <img src="saw/saw29.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Machine Shop Smart Manufacturing Proposal</figcaption>
+                    </figure>
+                </button>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw26.png' ">
+                     <figure>
+                        <img src="saw/saw26.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Project Proposal</figcaption>
+                    </figure>
+                </button>
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

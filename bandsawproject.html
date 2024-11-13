@@ -59,6 +59,22 @@
   gtag('config', 'G-EGCD4JQGBD');
 </script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+    if (localStorage.getItem("bandsawproject.html-quote-scroll") != null) {
+        $(window).scrollTop(localStorage.getItem("bandsawproject.html-quote-scroll"));
+    }
+
+    $(window).on("scroll", function() {
+        localStorage.setItem("bandsawproject.html-quote-scroll", $(window).scrollTop());
+    });
+
+  });
+</script>
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
     <!-- Sidebar/menu -->
@@ -98,54 +114,110 @@
 
         <!-- About section -->
         <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
-            <h2><b>Upgrading a 50-year-old Industrial Bandsaw to the Digital Age</b></h2>
+            <div class="w3-content" style="max-width:600px">
+                <h2><b>Upgrading a 40-year-old Industrial Bandsaw to the Computer Age</b></h2>
+            </div>
             <div class="w3-content w3-justify" style="max-width:600px">
-                <p> For my Masters project, I worked on remodeling a 50-year-old industrial bandsaw by adding computer control and data analytics to the machine for operational improvements.    </p>
-                <img src="saw/saw1.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="saw/saw2.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="saw/saw3.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="saw/saw4.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> The bandsaw was owned and operated by The Factory Amsterdam, an RPI Startup in the manufacturing industry.  </p>
-                <img src="saw/saw5.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> The Invent @ Rensselaer Startup Immersion Program worked with the RPI SMIC (Smart Manufacturing Innovation Center) to develop a project that was sponsored by CESMII because of its integration of the CESMII Smart Manufacturing Innovation Platform (SMIP) into the operations of a small manufacturer, a fundamental part of CESMII’s smart manufacturing initiatives. The SMIP is a data historian and visualization application that allows for data producers such as industrial machinery to connect to it via standardized communication protocols, manage their data, and visualize data insights.</p>
-                <img src="saw/saw6.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> The goal of the project was to make the bandsaw machine more reliable when used and to reduce downtime when maintenance was inevitably needed. I worked on the project in Amsterdam, NY in an old industrial building.</p>
-                <img src="saw/saw7.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="saw/saw8.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="saw/saw9.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> With a great view of the town and the Mohawk River. </p>
-                <img src="saw/saw10.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> I worked alongside seven of my peers in an old factory building, working towards the same goal of becoming an independent manufacturing enterprise that would allow everyone to sync their interests with work that would benefit the company. </p>
-                <img src="saw/saw11.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> But while they worked solely for the benefit of the company, my project over the summer of 2022 had a growing list of deliverables that needed to be achieved for several different parties. Dr. Ghosh, as my Coterm advisor, expected my work to involve operational methods that he taught us in the Inventors Studio courses. Craig Dory, the director of the Regional CESMII group and the financial sponsor of the project, expected smart manufacturing developments that would benefit the small manufacturer I was working with, a long sought after yet rarely achieved goal in the Smart Manufacturing community. TFA, as the owners of the machine, expected an improved machine with better reliability and improved operational capabilities. RTA, a smaller sponsor of the project who provided an industrial protocol device for the project, expected an industrial networking article discussing the accomplishments of the project (linked below).  </p>
-                <a href="https://www.rtautomation.com/case-studies/the-factory-amsterdam/" target="_blank"> RTA Article</a>
-                <img src="saw/saw12.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> So, there were a lot of deliverables to juggle as the project progressed. I began with no knowledge of PLCs (programmable logic controllers), industrial communication, or how to work with industrial machinery. Over the course of two summers and intermittent work over the school year, I was able to install the PLC onto the machine, rewiring all the electrical logic and signals of the machine through the PLC, and maintain the operational logic of the machine.</p>
-                <img src="saw/saw13.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> This process seemed daunting at first, but every milestone and challenge was overcome through persistence and collaboration with my peers. The project demanded a lot of independent study and discovery, so it was very helpful to have peers around me to consult when I encountered difficult challenges. It was also helpful that I had experience working with industrial machinery in the MPS I and II classes. The Inventors Studio course also helped me grasp a higher-level understanding of the effect of my project on the operations of the company and demonstrate my projects impact to interested parties. In addition, I took the Multidisciplinary Capstone Design course last year and was placed in the Smart Manufacturing project group. This gave me a head start in understanding key smart manufacturing concepts and gave me preliminary experience working with the SMIP system that I utilized during my project.  </p>
-                <p> One interesting side project was collecting band speed measurements from the machine. The machine had a gauge that showed its band speed, but since it served no purpose in the logic of the machine its circuit was localized to the user control box. After some investigation, I found that the gauge was an electric gauge that was calibrated to a DC voltage value. A tachogenerator was used to convert the rotation of the band wheel that drove the saw of the machine to an AC voltage. This was connected to a rectifier circuit in the user control box to convert to a DC voltage that was then displayed as a band speed in FPM (feet per minute) on the display gauge. In order to collect this data, I purchased an analog input module that could read DC voltage at the appropriate range. I then rewired the rectifier circuit inside the PLC electrical box and connected the analog module to collect the DC signal. Afterwards, the signal was calibrated on the software side to display an accurate band speed.  </p>
-                <p> After I rewired the machine to PLC logic, I began working on integrating the machine to the SMIP. This process also had its challenges as the IT/OT gap is notoriously difficult to bridge. After failing to integrate a module that was purchased from Italy, I contacted John Rinaldi, the founder and CEO of RTA, an industrial communications expert. They agreed to provide an appropriate protocol gateway pro bono for my project. This protocol gateway converted serial signals that the PLC would send out to data objects that followed the standardized language model that the SMIP used, OPC-UA.  </p>
-                <img src="saw/saw14.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> This allowed for the signals from the bandsaw machine to be modelled as structured data on the SMIP. A novel data model using a UML diagram and a Fishbone diagram was developed to describe the operational functionality of the saw. A data connection was also successfully achieved between the machine and the SMIP, and preliminary data was sent through before The Factory Amsterdam had to go through an extended process of moving to a new facility.  </p>
-                <img src="saw/saw15.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> Although the projects deliverables were cut short because of the move, future work can be performed to actualize more results from the project. Future projects include developing a dashboard to interact with the machines operator and show important attributes to the operator, installing a current transducer to measure power consumption of the machine, and exploring cut quality and developing a predictive maintenance schedule for the machine using acoustic sensor data. The project did have some meaningful results. The machine has become easier to maintain with a well documented SOP and the PLC software that makes debugging issues a lot easier. Also, the machine is now in a state where it has a much greater potential for future research and improvements. Furthermore, the machine now has a greater capacity for operational optimization and the diagram below shows the difference in cut quality after the machine’s parameters are optimized for the particular stock that is being cut. This demonstration shows how important it is for the machines operator to be able to capture optimal parameters for repeatable future results. This task can only be actualized as a result of the manufacturing and smart manufacturing improvements made to the machine through this project. </p>
-                <img src="saw/saw16.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> The effect above can be achieved by developing an understanding of the effect of various machine attributes on the operational parameters of the machine. These effects are summarized in the process control table, which shows how various collected machine attributes can affect the operational parameters of the machine.  </p>
-                <img src="saw/saw17.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <p> After working on this project, I feel confident that I can take on any engineering challenge. This project taught me about how to learn independently, when and how to ask others for help, and it reaffirmed my own abilities and what I’m capable of doing. It also helped me understand my own interests and what I’d like to work on in the future. RPI overall has given me a great foundation to pursue a career in manufacturing. The experience I gained from the manufacturing classes at RPI such as MPS I and II, IS 2 and 3, AMPs, Analysis of Manufacturing Processes, etc.. have given me a great understanding of the manufacturing field and have equipped me to tackle any engineering challenges that I will encounter during my career. Furthermore, this project has given me invaluable experience working on industrial machinery and provided an immersive understanding of smart manufacturing applications and the world of the manufacturing industry. </p>
+                <p>For this project, I was tasked with retrofitting a PLC onto a 40-year-old Industrial Bandsaw and deploying Smart Manufacturing onto the machine. The bandsaw was owned and operated by a small manufacturing shop in Amsterdam, NY called The Factory Amsterdam (TFA). RPI’s Smart Manufacturing Innovation Center (SMIC) partnered with TFA to fund and provide support for my project. After a few months, I successfully rewired the machine to the PLC and was able to control the machine’s operations via the PLC software. I was also able to connect the machine to a data analytics platform to collect data and improve the machine’s operations. As a result, what was an unreliable black-box only a few months prior became a key and dependable cog in the shop’s operations and a part of the industrial internet of things.</p>
+                <iframe width="600" height="340" src="https://www.youtube.com/embed/lNWObkcOICw?si=1R6LiT47sI8NBnSW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3><b>Introduction:</b></h3>
+                <p>In the Summer of 2021, I was an intern at The Factory Amsterdam, an RPI Startup in the manufacturing industry. The shop they owned was located in an old factory building in Amsterdam, NY, with a beautiful view of the Mohawk river. One machine that I began working with was their semi-automated 40-year-old bandsaw, the C-1216A DoALL Production Horizontal bandsaw, which was used for cutting large quantities of stock. However, the machine suffered from frequent maintenance issues and misuse. To address these issues, a project was proposed to retrofit a PLC to the machine. This would reduce downtime by establishing a systematic method for debugging issues using the PLC and it would improve the functionality of the bandsaw by expanding our understanding of the inner workings of the machine. As the project progressed, its scope expanded to also include integrating a smart manufacturing architecture onto the machine to unlock its full operational potential. This project presents a case study that establishes key steps that any manufacturer can follow to modernize and connect their legacy equipment to the Industrial Internet of Things (IIOT). The project consists of three parts: Planning and Investigation, Control Unit Integration, and Bridging the IT/OT Gap.  </p>
+                <figure>
+                        <img src="saw/saw5.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>TFA Logo</figcaption>
+                </figure>
+                <figure>
+                        <img src="saw/saw10.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>View of Amsterdam, NY from the roof of the factory</figcaption>
+                </figure>
+                <figure>
+                        <img src="saw/saw7.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>The Factory - TFA was on the 5th Floor</figcaption>
+                </figure>
+                <figure>
+                        <img src="saw/saw9.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Inside TFA</figcaption>
+                </figure>
+                <figure>
+                        <img src="saw/saw1.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Bandsaw - Back View</figcaption>
+                </figure>
+                <figure>
+                        <img src="saw/saw2.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Bandsaw - Side View</figcaption>
+                </figure>
+                <figure>
+                        <img src="saw/saw4.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Bandsaw - Me with my baby</figcaption>
+                </figure>
+
+                <h3><b>Collaboration:</b></h3>
+                <p>My first summer with TFA, I started out the project with a fellow intern who focused on developing an algorithm to optimize stock-cutting on the bandsaw. After the summer, I took full ownership of the project and worked with my master’s advisor, Dr. Asish Ghosh, to create a set of deliverables and goals for the project to achieve. I also worked with Craig Dory and the Smart Manufacturing Innovation Center (SMIC) at RPI, which was particularly interested in the smart manufacturing architecture of the machine. My advisors kept me accountable to the various deliverables and gave the project some direction. I kept in contact with them every week and applied their advice to improve the project as needed. They respected my vision for the project, and I incorporated their idea. I also regularly sought the advice of TFA members, especially regarding matters in which they had more experience than I did, such as how to work with industrial power electronics. There were many people that helped me with the project, but at the end of the day it was an independent project and I was solely responsible and accountable for the project and its outcomes.</p>
+                <h3><b>Three Steps</b></h3>
+                <figure>
+                    <img src="saw/saw27.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Project - Process Flow</figcaption>
+                </figure>
+                <div class="container w3-content" style="max-width:800px">
+                    <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='PlanningInvestigation.html' ">
+                        <img src="saw/saw21.jpg" alt="sfm" style="width:100%;" />
+                    </button>
+                    <div class="centered w3-text-black" style="top:50%;font-size:xx-large">1. Planning & Integration</div>
+                </div>
+                <div class="container w3-content" style="max-width:800px">
+                    <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='ControlUnitIntegration.html' ">
+                        <img src="saw/saw22.jpg" alt="sfm" style="width:100%;" />
+                    </button>
+                    <div class="centered w3-text-white" style="top:50%;font-size:xx-large">2. Control Unit Integration</div>
+                </div>
+                <div class="container w3-content" style="max-width:800px">
+                    <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='IIOTArchitecture.html' ">
+                        <img src="saw/saw15.png" alt="sfm" style="width:100%;" />
+                    </button>
+                    <div class="centered w3-text-black" style="top:50%;font-size:xx-large">3. Bridging the IT/OT Gap</div>
+                </div>
+
+                <h3><b>Challenges & Solutions:</b></h3>
+                <p><ul>
+                <li><b>Electrical Documentation: </b>The first challenge I faced was that all of the documentation for the machine was illegible and not accurate. My solution was to dedicate several hours a week for an entire school year documenting the electrical connections throughout the machine, ensuring my understanding of the logic of the machine was thorough and reliable.  </li>
+                <li><b>Localized Connections: </b>One challenge I faced during rewiring was how to connect electronic components that had no connection to the central control panel. The strategy I devised was to hijack local wires that were connected to the central terminal but were not needed by the PLC. These wires would be reconnected to the electronic component of interest and the signal would be passed to the PLC.</li>
+                <li><b>Bridging the IT/OT gap: </b>Another challenge was to actually receive data on the cloud-based data platform from the machine. This task required converting serial machine data to object-oriented variables. The solution involved connecting the machine to a ModBus-OPC UA protocol gateway, which was then connected to a router via an ethernet cable, and a static IP was setup on a dedicated computer which sent the data through a secure local connection gateway to the data collection platform. Thus, allowing a data connection to be established for transmitting data to the SMIP. This task was very difficult because there was no one I could speak to that could provide reliable advice on how to establish the connection, so only after months of experimenting was a connection finally established.   </li>
+                <li><b>Collecting band speed data: </b>One interesting side project was collecting band speed measurements from the machine. The machine had a gauge that showed its band speed, but since it served no purpose in the logic of the machine its circuit was localized to the user control box. After some investigation, I found that the gauge was an electronic gauge that was calibrated to a DC voltage value. A tachogenerator was used to convert the rotation of the band wheel that drove the saw of the machine to an AC voltage. This was connected to a rectifier circuit in the user control box to convert to a DC voltage that was then displayed as band speed in feet per minute (FPM) on the display gauge. In order to collect this data, I purchased an analog input module that could read DC voltage at the appropriate range. I then rewired the rectifier circuit inside the PLC electrical box and connected the analog module to collect the DC signal. Afterwards, the signal was calibrated on the software side to display an accurate band speed.</li>
+            </ul></p>
+                <h3><b>Results:</b></h3>
+                <p>The project did have some meaningful results. The machine has become easier to maintain with a well-documented SOP and with PLC software that makes debugging issues a far smoother and more systematic process. Also, the machine is now in a state where it has a much greater potential for future research and development. Furthermore, the machine now has a greater capacity for operational optimization which affects characteristics such as cut quality and Overall Equipment Effectiveness (OEE). </p>
+                <h3><b>Future Improvements:</b></h3>
+                <p><ul>
+                    <li><b>Energy Consumption Metrics: </b>Attach a 3-phase current transducer to measure power output of the band and hydraulic motors for activity-based costing to estimate the cost of operating the machine.</li>
+                    <li><b>Preventative Maintenance using Acoustic Data: </b>Test hypothesis that measuring acoustic data during cuts can predict the quality of the cut as well as the wear of the band to establish a predictive maintenance model.</li>
+                    <li><b>Automated Outfeed Table: </b>Build an automated outfeed table to guide cut parts into a collection bin to convert the cutting process into a fully automated operation.</li>
+                    <li><b>Smart Manufacturing Dashboard: </b>Machine dashboard to display smart manufacturing operational insights to the operator such as OEE, Power Consumption, and Machine Utilization.</li>
+            </ul></p>
+                <h3><b>Conclusion:</b></h3>
+
+                <p>The modern manufacturing enterprise (MME) consists of cloud-connected computer-controlled machines for advanced controls and rapid integration of smart manufacturing insights. This renders capable legacy equipment obsolete for Small and Medium-sized Manufacturers (SMMs) transitioning to an MME to attain a competitive edge in their industry. My project serves as a testbed for adapting outdated industrial equipment to the MME, which can be replicated by SMMs seeking similar upgrades. The method comprises of three steps: 1) 'Planning & Investigation' to understand project constraints and assess feasibility, 2) 'Control Unit Integration' to rewire a machine from relay logic to a programmable logic controller (PLC) by a fully reversible process with minimal downtime, and 3) 'Bridging the IT/OT Gap' to establish network connectivity for data collection, and to develop a smart manufacturing architecture for operational optimizations.</p>
+                <p>The short-term plan for the project involved integrating a control unit into the bandsaw, establishing an industrial network to a Smart Manufacturing platform, and developing a data model for contextualizing machine operations. However, in the long-term the vision was to transform the machine into a fully automated machine using an IIOT architecture, a Raspberry PI, and the PLC that would not require an operator for its cutting operations.</p>
+                <p>Establishing a smart manufacturing architecture on the legacy equipment enables the implementation of diverse operational improvements. This project proposes one method of converting antiquated industrial machines to the MME, allowing for a more centralized and efficient production environment. Future students and researchers at RPI can build upon this work by testing the data model on the SMIP, developing an operator dashboard for displaying real-time machine data, integrating power consumption data through a current transducer installation, and creating a predictive maintenance model for the machine's blade using acoustic data.</p>
+                <p>At first the project seemed daunting, but every milestone and challenge was overcome through persistence and collaboration with my peers. The project demanded a lot of independent study and self-learning, so it was very helpful to have peers around me to consult with when I encountered difficult challenges. This project has taught me how to learn independently, when and how to ask others for help, and it reaffirmed my own belief in my capabilities as an engineer. It also helped me understand my own interests and what I’d like to work on in the future. Furthermore, this project has given me invaluable experience working with PLCs and industrial machinery and has equipped me with the skills to tackle any engineering challenge I may encounter during my career.</p>
                 <p> Here I show a video tour of the bandsaw and my associated project: </p>
                 <a href="https://youtu.be/lNWObkcOICw?si=JTY8bpfwyfL40y4D" target="_blank"> Bandsaw Video Tour </a>
-                <p> And a video of the saw in operation: </p>
+                <p> And here is a video of the saw in operation: </p>
                 <a href="https://www.instagram.com/p/CT7ZDp7rv_N/?img_index=1" target="_blank"> Bandsaw Sample Cut </a>
+                <p>This is a Real Time Automation article discussing the project: <a href="https://www.rtautomation.com/case-studies/the-factory-amsterdam/" target="_blank"> RTA Article</a> </p>
                 <hr class="w3-opacity">
+                <h3><b>Documentation:</b></h3>
+                <p>When I first started working on the project, I decided to document every electrical connection in the machine to decipher the inner workings of the bandsaw in order to get a better understanding of the scope of the project. As it progressed, I was very thorough in documenting every aspect of the project because I wanted to make sure that all changes that were made were reversible if something went wrong and presentable if the project was successful. I also created a Standard Operating Procedure (SOP) for operating the saw since the machine operators were not properly trained in the operation of the saw and as a result were occasionally misusing the machine. The SOP can be viewed here: <a href="saw/bandSaw_StandardOperatingProcedures.pdf" target="_blank"> Bandsaw SOP</a>.</p>
+                <h3><b>Acknowledgments:</b></h3>
+                <p>I’d like to thank Dr. Ghosh, Director of RPI’s Invent at Rensselaer Program, and Craig Dory, Director of the RPI Smart Manufacturing Innovation Center (SMIC), for acting as advisors for this project and as my mentors for two years. Also, I want to thank the Clean Energy Smart Manufacturing Innovation Institute (CESMII) for sponsoring my project. In addition, I want to thank The Factory Amsterdam (TFA), a local manufacturing shop started by RPI students, that trusted me (questionable decision) to work on their industrial saw to complete my project. I’d also like to thank Real Time Automation (RTA), an expert in industrial communication, that provided a protocol gateway for my project at no cost.</p>
+
             </div>
         </div>
         <!-- Contact section -->
         <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
             <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
                 <h4 class="w3-center"><b>Contact Me</b></h4>
-                <p class="w3-center">Email (preferred contact method): <strong>michael.aksen@gmail.com</strong> <br>
-                Phone #: <strong>201-982-1776</strong>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
                 </p>
             </div>
         </div>

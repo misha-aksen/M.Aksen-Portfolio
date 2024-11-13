@@ -102,7 +102,10 @@
             <div class="w3-content w3-justify" style="max-width:600px">
                 <h3><b>Objective:</b></h3>
                 <p> Develop a manufacturing process to produce 300 wheel wires, utilizing 1/8” 304 stainless steel to leverage its durability, weight, and corrosion resistance.</p>
-                <img src="air/airplane9.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <figure>
+                        <img src="air/airplane9.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption class="w3-center">Wheel Wire - 3D Model Representation</figcaption>
+                </figure>
                 <h3><b>Collaboration:</b></h3>
                 <p> Partnered with a peer to accelerate the design and manufacturing process, ensuring efficiency and effectiveness in approach. </p>
                 <h3><b>Manufacturing Process:</b></h3>
@@ -128,24 +131,58 @@
                         </ul>
                     </li>
                 </ul>
-                <img src="air/airplane4.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="air/airplane39.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <figure>
+                        <img src="air/airplane4.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption class="w3-center">Wheel Wire Die</figcaption>
+                </figure>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='air/airplane39.png' ">
+                    <figure>
+                        <img src="air/airplane39.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Wheel Wire Die - CAD Model</figcaption>
+                    </figure>
+                </button>
+
                 <p><b>  4.	Quality Control:</b></p>
                 <ul>
                     <li>	Two quality control gauges were laser-cut & used to check that the bent wheel wire would meet the specifications of the design</li>
                     <li> 	A general quality control gauge block was designed to check that the wheel wire generally lined up to its expected contour, with an acceptable 6/100” surface parallelism constraint between the flat ends of the wire </li>
                     <li>	A top arc quality control gauge block was used to check that the critical top arc would satisfy the tolerance requirements because this is where the wheel wire interfaced with the fuselage. The gauge was designed to check for a 3/100” surface parallelism constraint between the top arcs on both sides of the wheel wire.</li>
                 </ul>
-                <img src="air/airplane12.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                <img src="air/airplane13.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='air/airplane12.jpg' ">
+                    <figure>
+                        <img src="air/airplane12.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Wheel Wire Drawing w/GD&T</figcaption>
+                    </figure>
+                </button>
+                <figure>
+                        <img src="air/airplane13.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption class="w3-center">Wheel Wire - Top Arc Quality Control Gauge</figcaption>
+                </figure>
+
                 <p><b>  5.	Challenges and Solutions:</b></p>
                 <ul>
                     <li>	We encountered springback issues, where wires did not achieve the desired bend. To counter this, we adjusted the die design to intentionally overbend the wires using the Springback equation, anticipating the springback effect.</li>
-                    <img src="air/airplane14.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figure>
+                        <img src="air/airplane14.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption class="w3-center">Springback Equation</figcaption>
+                    </figure>
                     <li>	Force requirements exceeded our simulations by more than double due to the absence of spacing between the moving and base dies, causing unintended shearing. We introduced tolerances in the dies to alleviate this issue, sacrificing minimal accuracy for improved functionality. The die clearance equation was used to calculate the tolerances needed. </li>
-                    <img src="air/airplane15_2.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                    <img src="air/airplane11.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
-                    <img src="air/Picture9.gif" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figure>
+                        <img src="air/airplane15_2.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption class="w3-center">Die Clearance Tabulated Values</figcaption>
+                    </figure>
+                        <figure>
+                            <img src="air/airplane11.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                            <figcaption class="w3-center">Plot of Resultant Tool Force (lbf) vs. Stroke (in) - Sharp spike in tool force indicates unexpected shearing during bending operation</figcaption>
+                        </figure>
+                    <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='air/Picture9.gif' ">
+                        <figure>
+                            <img src="air/Picture9.gif" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                            <figcaption class="w3-center">Wheel Wire Bending Simulation in Altair Inspire</figcaption>
+                        </figure>
+                    </button>
+
+
                 </ul>
                 <h3><b>Results:</b></h3>
                 <p>Ultimately, we successfully manufactured 360 wheel wires — 60 additional units were produced to account for a scrap rate of up to 20% for future steps.</p>
@@ -167,8 +204,8 @@
         <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
             <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
                 <h4 class="w3-center"><b>Contact Me</b></h4>
-                <p class="w3-center">Email (preferred contact method): <strong>michael.aksen@gmail.com</strong> <br>
-                Phone #: <strong>201-982-1776</strong>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
                 </p>
             </div>
         </div>

@@ -1,0 +1,193 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>M.Aksen Project Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./bandsawproject.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>3. Bridging the IT/OT Gap</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <p>My work to bridge the IT/OT gap can be divided into two steps. One is my work establishing a networking connection between the bandsaw and a data collection platform. The second is developing a smart manufacturing data model for the saw. Unfortunately, time was not on my side and the company became insolvent before I could put these two facets of the project together. However, on my last day in the shop before the project was put on hold indefinitely, I finally achieved a successful connection between the bandsaw and the data collection platform.</p>
+                <p>Once the PLC was installed onto the bandsaw, I moved on to establishing an IIOT architecture onto the machine. The first step was to connect the machine to the SMIP, a cloud-based smart manufacturing platform developed by CESMII. This step proved to be possibly the most challenging and frustrating part of the project. What I expected to take a couple weeks took me several months to resolve. While the SMIP primarily uses OPC-UA and MTConnect as its data models, the CLICK PLC utilizes Modbus and MQTT as industrial communication standards. Bridging this communication gap was challenging due to differing IT and OT standards. The SMIP focused on object-based protocols for data categorization, while the PLC relied on serial communication for live data transfer between machines. To address this, I collaborated with Real Time Automation, an Industrial networking expert, and utilized their Modbus Slave-OPC-UA Server gateway. This gateway converted serial Modbus RS-485 data from the PLC into native OPC-UA object data, allowing the SMIP to historize and analyze it. The data, organized as a set of Modbus registers, was designed to be structured into a functional data model on the SMIP. With the help of RTA, CESMII, and ThinkIQ networking experts, I was able to establish a successful connection to the SMIP and verify that data was being captured from the machine. One important step was the use of a static IP on the host computer to maintain a connection to the cloud database. Another important step was making sure that the SMIP was historizing data variables that were setup. Without this, data was not being shown on the platform. These problems, along with several other important steps that were only figured out through trial and error needed to be setup correctly to establish and maintain a valid connection.</p>
+                <p>    It was critical to structure the data from the PLC into a functional data model to contextualize the live-data and derive operational improvements. A fishbone and UML diagram were used to develop a novel data model for a standard industrial hydraulic band saw. In addition, a process control table was created to map the collected attributes to the standard operational parameters for data-driven optimizations. Parameters that were considered include OEE, power consumption, and machine utilization. I was able to obtain raw bandsaw data on the SMIP indicating a successful connection between the bandsaw and the SMIP, but before I was able to implement the data model, the company became insolvent and had to close shop. </p>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw30.jpg' ">
+                    <figure>
+                        <img src="saw/saw30.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Bandsaw Data Model - Fishbone Diagram</figcaption>
+                    </figure>
+                </button>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw15.png' ">
+                    <figure>
+                        <img src="saw/saw15.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Preliminary Data Received Remotely indicating a Successful Connection to the Saw</figcaption>
+                    </figure>
+                </button>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw17.jpg' ">
+                    <figure>
+                        <img src="saw/saw17.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Process Control Table</figcaption>
+                    </figure>
+                </button>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw40.png' ">
+                    <figure>
+                        <img src="saw/saw40.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Bandsaw Data Model - Preliminary OPC-UA UML Diagram</figcaption>
+                    </figure>
+                </button>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw41.jpg' ">
+                    <figure>
+                        <img src="saw/saw41.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Networking Diagram - Current State</figcaption>
+                    </figure>
+                </button>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw42.jpg' ">
+                    <figure>
+                        <img src="saw/saw42.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Networking Diagram - Future State</figcaption>
+                    </figure>
+                </button>
+               <figure>
+                    <img src="saw/saw43.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Sample Cut - Before Cut Optimizations</figcaption>
+               </figure>
+
+                <figure>
+                    <img src="saw/saw44.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Sample Cut - After Cut Optimizations</figcaption>
+                </figure>
+
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

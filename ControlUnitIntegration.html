@@ -1,0 +1,196 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>M.Aksen Project Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./bandsawproject.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>2. Control Unit Integration</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw28.jpg' ">
+                    <figure>
+                        <img src="saw/saw28.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Iterative Implementation</figcaption>
+                    </figure>
+                </button>
+
+                <br>
+                <p>To minimize downtime, all control inputs and outputs were connected to a centralized industrial controller using an iterative and easily reversible approach. All changes were documented for easy debugging, ensuring a robust and reversible control unit integration. This iterative approach consists of the following steps: </p>
+                <ol>
+                    <li>Identify a set of inputs and outputs that can be disconnected from the relay modules and reconnected to the PLC without compromising the entire machine’s functionality.</li>
+                    <li>Purchase all components needed for the task, such as additional input/output modules, to avoid delays.</li>
+                    <li>Plan out the rewiring to ensure it was as initially planned.</li>
+                    <li>Turn off the machine. Disconnect the wires needed for the connection. Connect the identified set of inputs & outputs to the PLC.</li>
+                    <li>Document the connections made between the machine's inputs/outputs and the corresponding I/O ports on the PLC.</li>
+                    <li>Connect the computer to the PLC and test individual PLC I/O port connections to the machine. </li>
+                    <li>Program ladder logic into the PLC for machine control, emulating the hardware logic that passed through the relays.</li>
+                    <li>Remove parallel, vestigial connections from the machine, leaving only the logic passing through the PLC.</li>
+                    <li>Test the system with connections solely passing through the PLC.</li>
+                </ol>
+                <p>The iterative approach led to self-contained steps of varying size and complexity. Effective communication with the machine's operators ensured that downtime did not interfere with important tasks. I followed these steps to rewire the entire machine until all of the machine’s logic ran through the PLC. Standard AC digital input and output modules were used for most of the signals while a relay output module was used to control the state of the machine’s hydraulic and band motors. In addition, an analog module was used to collect band speed data. Following the completion of this process, I secured the PLC in a NEMA-certified electronics box that I attached to the machine to isolate the PLC electromagnetically from its industrial environment and to prevent debris from contaminating the PLC. Afterwards, two relay contact protection circuits were added to extend the life of the PLC relay module. I also installed a Wi-Fi module so that the PLC and the machine could be monitored remotely.</p>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw22.jpg' ">
+                    <figure>
+                        <img src="saw/saw22.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>PLC - In-Progress</figcaption>
+                    </figure>
+                </button>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw24.jpg' ">
+                    <figure>
+                        <img src="saw/saw24.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>PLC - Completed</figcaption>
+                    </figure>
+                </button>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw23.jpg' ">
+                    <figure>
+                        <img src="saw/saw23.jpg" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Additional Circuits</figcaption>
+                    </figure>
+                </button>
+
+                <figure>
+                    <img src="saw/saw13.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Relay Logic vs. PLC Logic</figcaption>
+                </figure>
+
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='saw/saw39.png' ">
+                    <figure>
+                        <img src="saw/saw39.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Ladder Logic - Code Snippet</figcaption>
+                    </figure>
+                </button>
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
