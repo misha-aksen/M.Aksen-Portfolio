@@ -9,6 +9,10 @@
             color: white;
             }
 
+            .container:hover {
+            background-color:white
+            }
+
             /* Centered text */
             .centered {
             position: absolute;
@@ -107,36 +111,37 @@ $(document).ready(function () {
         <!-- Photo grid -->
         <h1> <center>Project Portfolio </center></h1>
         <br>
-        <div class="container w3-content" style="max-width:800px" >
-            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='airplaneproject.html' ">
-                <img src="air/airplane1.png" alt="Airplane" style="width:800px;" />
-            </button>
-            <div class="centered">Manufacturing 300 Toy Airplanes</div>
+        <div class="container w3-content w3-padding" style="max-width:600px;" >
+            <p><a href="airplaneproject.html">
+            <img src="air/airplane1.png" alt="airplane" width="100%">
+            </a></p>
+            <h1 style="color:black;">Manufacturing 300 Toy Airplanes</h1>
         </div>
         <br>
-        <div class="container" >
-            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='bandsawproject.html' ">
-                <img src="bandsaw1.jpg" alt="sfm" style="width:800px" />
-            </button>
-            <div class="centered">Upgrading an Industrial Machine to the Computer Age</div>
+        <div class="container w3-content w3-padding" style="max-width:600px;" >
+            <p><a href="bandsawproject.html">
+            <img src="bandsaw1_cropped.jpg" alt="bandsaw" width="100%">
+            </a></p>
+            <h1 style="color:black;">Computerizing an Industrial Bandsaw</h1>
         </div>
         <br>
-        <div class="container">
-            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='atomicorbital.html' ">
-                <img src="sfm/sfm0.jpg" alt="sfm" style="width:800px;" />
-            </button>
-            <div class="centered"> <font color="#808080">Flying Around an Atom</font> </div>
+        <div class="container w3-content w3-padding" style="max-width:600px;" >
+            <p><a href="atomicorbital.html">
+            <img src="sfm/sfm0.jpg" alt="Atomic Flight" width="100%">
+            </a></p>
+            <h1 style="color:black;">Atomic Orbital Kinematics</h1>
         </div>
         <br>
-        <div class="container">
-            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='heattransferproject.html' ">
-                <img src="heatTransfer2.png" alt="Heat Transfer" style="width:800px;" />
-            </button>
-            <div class="centered" style="top:20%" >Cooling Electronics</div>
+        <div class="container w3-content w3-padding" style="max-width:600px;" >
+            <p><a href="heattransferproject.html">
+            <img src="heatTransfer2.png" alt="Heat Transfer" width="100%">
+            </a></p>
+            <h1 style="color:black;">Cooling Electronics</h1>
         </div>
+        <br>
+        <br>
 
-
-        <!-- Modal for full size images on click-->
+        <!-- Modal for full size images on click
         <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
             <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
             <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -144,26 +149,29 @@ $(document).ready(function () {
                 <p id="caption"></p>
             </div>
         </div>
-
+        -->
         <!-- About section -->
         <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
             <h4><b>About Me</b></h4>
             <img src="portrait-min.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
             <div class="w3-content w3-center" style="max-width:600px">
                 <h4>Michael Aksen</h4>
-                <p> Ever since I was little, my grandpa would show me all the different inventions he had sketched out. From something small like a tool to pick up dog poop, to a revolutionary idea for an air-powered vehicle, he was always inventing things, and I was always helping him. He was a mechanical engineer in the Soviet Union, but because of the language barrier he had to forego his engineering pursuits when he moved to America to support my mom. I hope that his engineering dreams can be fulfilled vicariously through my accomplishments.
-                    <br>    Studying at RPI opened my mind to all the different engineering opportunities available to me. What drew me to manufacturing was seeing how much the field can still grow. I always thought it was cool to build stuff, to see the latest advancements in technology, and to experience the magic of electricity, but once I came to RPI I saw how those areas of interest could mesh. Now that I've graduated, I plan to leverage my unique background and experiences in engineering to drive change and develop creative solutions to challenging problems. I care about innovation and the future of manufacturing, and I hope to apply my skills to feed the fires of progress. For example, I envision a prototyping shop with CNC machines all interconnected through the cloud. They would be controlled by a master algorithm that determines how to make any part and sends instructions to the automated machines through an assembly-line format whereby any design that can be thought of could be made automatically.
-                    <br>    In my free time, I enjoy being outdoors. I recently completed the Devil's Path hike and the Presidential Traverse, two of the most difficult hikes on the East Coast. I hope to continue pushing myself physically as well as mentally through my extracurricular pursuits. I love to ski and play basketball. Finding new challenges to tackle and pushing myself to excel drives me to be better at these sports and be a better person as a whole. I am also passionate about adventure and exploring the world. One of my favorite pastimes is appreciating the autumn beauty of the New England woodlands. Other than outdoorsy pursuits, I also love to spend time indoors and either play boardgames with my friends, watch a movie, or play one of my endless strategical Rome: Total War campaigns.
-                </p>
+            </div>
+            <div class="w3-content w3-justify" style="max-width: 600px"
+                <p> &emsp; Ever since I was little, my grandpa would show me all the different inventions he had sketched out. From something small like a tool to pick up dog poop, to a revolutionary idea for an air-powered vehicle, he was always inventing things, and I admired him for it. He was a mechanical engineer in the Soviet Union, but because of the language barrier he had to forego his engineering pursuits when he moved to America to support my mom. For all that he sacrificed, I hope that his dreams of innovation can be fulfilled vicariously through my own engineering accomplishments. </p>
+                    <p> &emsp; Studying at RPI opened my mind to all the different engineering opportunities available to me. What drew me to manufacturing was seeing how much the field can still grow. I always thought it was cool to build stuff, to see the latest advancements in technology, and to experience the marvel of electricity, but once I came to RPI I saw how those areas of interest could mesh. Now that I've graduated, I plan to leverage my unique background and experiences in engineering to drive change and develop creative solutions to challenging problems. For example, I envision a prototyping shop with CNC machines all interconnected through the cloud to optimize low-volume manufacturing. They would be controlled by a master algorithm that determines how to make any part and sends instructions to the automated machines through an assembly-line format, whereby any design can be fabricated on-demand, automatically. </p>
+                   <p> &emsp; In my free time, I enjoy skiing, playing basketball, and hiking. I've completed the Devil's Path and the Presidential Traverse, two of the most difficult hikes on the East Coast and I hope to continue pushing myself physically as well as mentally through my extracurricular pursuits. Finding new challenges to tackle and pushing myself to excel drives me to be better at these sports and be a better person overall. I am also passionate about adventure and exploring the world. I recently went on a month-long roadtrip exploring 8 states and 8 national parks in the Pacific Northwest. Other than outdoorsy pursuits, I also like to spend time indoors and play boardgames with my friends, watch a movie, or rewrite ancient history playing a Rome Total War campaign.</p>
+            </div>
+            <div class="w3-content w3-center" style="max-width:600px">
                 <hr class="w3-opacity">
                 
                 <h4 class="w3-wide">Technical Skills</h4>
                 <p><b>Programming</b></p>
-                <p>Java, Python, MATLAB, Arduino C</p>
+                <p>Java, Python, MATLAB, Arduino C, PLC Ladder Logic</p>
                 <p><b>Software</b></p>
-                <p>NX, NX Nastran, SolidWorks, PLC Ladder Logic, Simulink, Ansys FEA</p>
+                <p>NX, NX Nastran, SolidWorks, Simulink, Ansys FEA, LabView</p>
                 <p><b>Manufacturing</b></p>
-                <p>Manual Machining, 3D Printing, MIG Welding, Value-stream mapping, Design for Manufacturing </p>
+                <p>Manual Machining, 3D Printing, MIG Welding, Value-stream mapping, Design for Manufacturing, Pick-and-place Robot Programming </p>
                 <p><b>Other Skills</b></p>
                 <p>Russian Language (fluent), Getting lost in the woods, Making up fictional stories like the time I met Obama </p>
                 <br>
@@ -173,7 +181,7 @@ $(document).ready(function () {
                 <p>'21 Gene Haas Manufacturing Award Recipient</p>
                 <p>'20 RPI Elevator Pitch Competition 3rd Place</p>
 
-                <button type="submit" onclick="window.open('./Resume.pdf')" class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button><hr class="w3-opacity">
+                <button type="submit" onclick="window.open('./Resume_MichaelAksen.pdf')" class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button><hr class="w3-opacity">
 
                 </div>
 
