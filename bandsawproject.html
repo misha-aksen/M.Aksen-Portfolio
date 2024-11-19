@@ -9,6 +9,10 @@
             color: white;
             }
 
+            .container:hover {
+            background-color: LightGray
+            }
+
             /* Centered text */
             .centered {
             position: absolute;
@@ -16,6 +20,15 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 30px
+            }
+
+             #dropdown-subprojects {
+                display:none;
+            }
+
+            #subprojects:hover #dropdown-subprojects{
+                display:block;
+                text-align: center;
             }
         </style>
         <title>M.Aksen Project Portfolio</title>
@@ -83,7 +96,16 @@ $(document).ready(function () {
         <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
         <a href="javascript:void(0)" onclick="w3_close()"
             class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-        <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+            <div id="subprojects">
+                <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">BANDSAW SUBPROJECTS</a>
+                <ul id="dropdown-subprojects" style="list-style-type: none;">
+                    <li><a href="PlanningInvestigation.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">1. Planning & Integration</a></li>
+                    <li><a href="ControlUnitIntegration.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">2. Control Unit Integration</a></li>
+                    <li><a href="IIOTArchitecture.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">3. Bridging the IT/OT gap</a></li>
+                </ul>
+            </div>
+            <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+
     </nav>
 
     <!-- Top menu on small screens -->
@@ -115,7 +137,7 @@ $(document).ready(function () {
         <!-- About section -->
         <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
             <div class="w3-content" style="max-width:600px">
-                <h2><b>Upgrading an Industrial Machine to the Computer Age</b></h2>
+                <h2><b>Computerizing an Industrial Bandsaw</b></h2>
             </div>
             <div class="w3-content w3-justify" style="max-width:600px">
                 <p>For this project, I was tasked with retrofitting a PLC onto a 40-year-old Industrial Bandsaw and deploying Smart Manufacturing onto the machine. The bandsaw was owned and operated by a small manufacturing shop in Amsterdam, NY called The Factory Amsterdam (TFA). RPI’s Smart Manufacturing Innovation Center (SMIC) partnered with TFA to fund and provide support for my project. After a few months, I successfully rewired the machine to the PLC and was able to control the machine’s operations via the PLC software. I was also able to connect the machine to a data analytics platform to collect data and improve the machine’s operations. As a result, what was an unreliable black-box only a few months prior became a key and dependable cog in the shop’s operations and a part of the industrial internet of things.</p>
@@ -160,24 +182,23 @@ $(document).ready(function () {
                         <figcaption class="w3-center">Project - Process Flow</figcaption>
                     </figure>
                 </button>
-
-                <div class="container w3-content" style="max-width:800px">
-                    <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='PlanningInvestigation.html' ">
-                        <img src="saw/saw21.jpg" alt="sfm" style="width:100%;" />
-                    </button>
-                    <div class="centered w3-text-black" style="top:50%;font-size:xx-large">1. Planning & Integration</div>
+                <div class="container w3-content w3-padding" style="max-width:600px;" >
+                    <p><a href="PlanningInvestigation.html">
+                    <img src="saw/saw21.jpg" alt="Controls Documentation" width="100%">
+                    </a></p>
+                    <h1 style="color:black;">1. Planning & Integration</h1>
                 </div>
-                <div class="container w3-content" style="max-width:800px">
-                    <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='ControlUnitIntegration.html' ">
-                        <img src="saw/saw22.jpg" alt="sfm" style="width:100%;" />
-                    </button>
-                    <div class="centered w3-text-white" style="top:50%;font-size:xx-large">2. Control Unit Integration</div>
+                <div class="container w3-content w3-padding" style="max-width:600px;" >
+                    <p><a href="ControlUnitIntegration.html">
+                    <img src="saw/saw22.jpg" alt="PLC Connected" width="100%">
+                    </a></p>
+                    <h1 style="color:black;">2. Control Unit Integration</h1>
                 </div>
-                <div class="container w3-content" style="max-width:800px">
-                    <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='IIOTArchitecture.html' ">
-                        <img src="saw/saw15.png" alt="sfm" style="width:100%;" />
-                    </button>
-                    <div class="centered w3-text-black" style="top:50%;font-size:xx-large">3. Bridging the IT/OT Gap</div>
+                <div class="container w3-content w3-padding" style="max-width:600px;" >
+                    <p><a href="IIOTArchitecture.html">
+                    <img src="saw/saw15.png" alt="DigitalSignal" width="100%">
+                    </a></p>
+                    <h1 style="color:black;">3. Bridging the IT/OT Gap</h1>
                 </div>
 
                 <h3><b>Challenges & Solutions:</b></h3>

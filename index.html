@@ -10,7 +10,7 @@
             }
 
             .container:hover {
-            background-color:white
+            background-color:LightGrey
             }
 
             /* Centered text */
@@ -21,6 +21,15 @@
             transform: translate(-50%, -50%);
             font-size: 45px
 
+            }
+
+            #dropdown-projects {
+                display:none;
+            }
+
+            #projects:hover #dropdown-projects{
+                display:block;
+                text-align: center;
             }
         </style>
         <title>M.Aksen Project Portfolio</title>
@@ -83,13 +92,24 @@ $(document).ready(function () {
 
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
-        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+        <br>
         <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
         <a href="javascript:void(0)" onclick="w3_close()"
             class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+            <div id="projects">
+                <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
+                <ul id="dropdown-projects" style="list-style-type: none;">
+                    <li><a href="airplaneproject.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">Manufacturing 300 Toy Airplanes</a></li>
+                    <li><a href="bandsawproject.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">Computerizing an Industrial Bandsaw</a></li>
+                    <li><a href="atomicorbital.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">Atomic Orbital Kinematics</a></li>
+                    <li><a href="heattransferproject.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">Cooling Electronics</a></li>
+                </ul>
+            </div>
+
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+
     </nav>
 
     <!-- Top menu on small screens -->

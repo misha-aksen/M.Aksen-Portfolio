@@ -9,6 +9,10 @@
             color: white;
             }
 
+            .container:hover {
+            background-color: LightGray
+            }
+
             /* Centered text */
             .centered {
             position: absolute;
@@ -16,6 +20,15 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 30px
+            }
+
+            #dropdown-subprojects {
+                display:none;
+            }
+
+            #subprojects:hover #dropdown-subprojects{
+                display:block;
+                text-align: left;
             }
         </style>
         <title>M.Aksen Project Portfolio</title>
@@ -83,7 +96,16 @@ $(document).ready(function () {
         <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
         <a href="javascript:void(0)" onclick="w3_close()"
             class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-        <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+            <div id="subprojects">
+                <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">AIRPLANE SUBPROJECTS</a>
+                <ul id="dropdown-subprojects" style="list-style-type: none;text-align:left">
+                    <li><a href="manufacturingWheelWires.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">Manufacturing Wheel Wires</a></li>
+                    <li><a href="assemblingWheelWires.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">Assembling Wheel Wires</a></li>
+                    <li><a href="roboticAssembly.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">Robotic Assembly</a></li>
+                </ul>
+            </div>
+            <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+
     </nav>
 
     <!-- Top menu on small screens -->
@@ -112,32 +134,32 @@ $(document).ready(function () {
             <p>My first task was to develop a method to manufacture 300 wheel wires. Select the picture below to read about this subproject.</p>
             <br>
         </div>
-        <div class="container w3-justify w3-content" style="max-width:800px">
-            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='manufacturingWheelWires.html' ">
-                <img src="air/wheelWirePicture.jpg" alt="Airplane" style="width:100%;" />
-            </button>
-            <div class="centered w3-text-black" style="top:30%; left:47%;font-size:xx-large">Manufacturing Wheel Wires</div>
+        <div class="container w3-content w3-padding" style="max-width:600px;" >
+            <p><a href="manufacturingWheelWires.html">
+            <img src="air/wheelWirePicture.jpg" alt="Wheel Wire" width="100%">
+            </a></p>
+            <h1 style="color:black;">Manufacturing Wheel Wires</h1>
         </div>
         <br>
         <div class="w3-content w3-justify" style="max-width:600px">
             <p>After the wheel wires were manufactured, I was tasked with developing a method to assemble sets of wheels onto each of the 300 wheel wires. Select the picture below to read about this subproject.</p>
             <br>
         </div>
-        <div class="container w3-content" style="max-width:800px">
-            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='assemblingWheelWires.html' ">
-                <img src="air/airplane3.png" alt="sfm" style="width:100%;" />
-            </button>
-            <div class="centered w3-text-black" style="top:17%;font-size:xx-large">Assembling Wheel Wires</div>
+        <div class="container w3-content w3-padding" style="max-width:600px;" >
+            <p><a href="assemblingWheelWires.html">
+            <img src="air/airplane3.png" alt="Wheel Wire Assembly" width="100%">
+            </a></p>
+            <h1 style="color:black;">Assembling Wheel Wires</h1>
         </div>
         <br>
         <div class="w3-content w3-justify" style="max-width:600px">
             <p>After completing the wheel wire assembly process, I volunteered to help with the robotic assembly of the wing and horizontal stabilizer halves. Select the picture below to read about this sub-project. </p>
         </div>
-        <div class="container w3-content" style="max-width:800px">
-            <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='roboticAssembly.html' ">
-                <img src="air/airplane6.png" alt="sfm" style="width:800px;" />
-            </button>
-            <div class="centered w3-text-light-grey"  style="font-size:xx-large">Robotic Assembly</div>
+        <div class="container w3-content w3-padding" style="max-width:600px;" >
+            <p><a href="roboticAssembly.html">
+            <img src="air/airplane6.png" alt="Wheel Wire Assembly" width="100%">
+            </a></p>
+            <h1 style="color:black;">Robotic Assembly</h1>
         </div>
         <br>
         <div class="w3-content w3-justify" style="max-width:600px">
