@@ -1,0 +1,169 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>M.Aksen Project Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./roboticsProject.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>2. Inverse Kinematics</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h3>Summary:</h3>
+                <p>The inverse kinematics method used for this project was a Jacobian-based damped least squares iterative method. This allowed us to take in a path that was generated either via G-Code+Parsing or from the path generation and then generate joint angles that can be fed through our interface for robot positioning. The validity of the method is shown through robot simulations and through testing of the paths on the Dofbot. </p>
+                <h3>Theory:</h3>
+                <p>This method of inverse kinematics utilizes the minimization of the equation shown in Figure 1. And the updated law which is shown in Figure 2 reduces the cost function until a solution is found.  </p>
+                <figure>
+                    <img src="robot/robot7.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure I. Minimization problem for finding joint angles</figcaption>
+                </figure>
+                <figure>
+                    <img src="robot/robot8.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure II. Updated formula for the Damped Least Squares Method</figcaption>
+                </figure>
+                <br>
+
+                <h3>Application:</h3>
+                <p>This method for inverse kinematics was programmed in python. In the application of the Dofbot, a Pd in the form of the path coordinates were inputs to the program. The algorithm required some tuning of the parameters in order to converge to a joint angle in a reasonable amount of time and with a desired level of accuracy. The tuned parameters for the algorithm are shown in Figure 3. Alpha was decreased to avoid instability in generated joint angles and Nmax was increased to ensure the IK implementation was reliable and reached actual values. All of the animations developed for this project used the joint angles developed from this algorithm. </p>
+                <figure>
+                    <img src="robot/robot9.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure III. Tuned parameters for the Inverse Kinematics</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="robot/genericsimulatedmove.gif" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure IV. Animated simulation for the joint angles</figcaption>
+                </figure>
+
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

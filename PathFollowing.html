@@ -1,0 +1,207 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>M.Aksen Project Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./roboticsProject.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>4. Path Following w/Feedback</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h3>Summary:</h3>
+                <p>For the Dofbot, PID was implemented and demonstrated in a separate path to the PnP operation. Some velocity control was tested in the beginning of the project for the path, but we found that it did not significantly improve the smoothness of the path for the PnP or etching tasks. Therefore, a joint-based position control functionality was implemented. Joint-based control allows for the retention of R0T changes that could not be constrained if end effector position, P0T, was controlled for the PID code instead. Position-based control was performed for all five joints that control end effector position concurrently. After some tuning, a stable system was demonstrated with live-feedback from the Dofbot (shown in <a href="#pid" onclick="w3_close()">Figure X</a>).   </p>
+                <h3>Theory:</h3>
+                <p>PID control, which is a form of closed-loop feedback control, is used in systems where there may be sensor-noise or just general system noise and errors that may prevent a standard open-loop system from reaching its target values. Therefore, PID control is implemented to ensure the system reliably reaches its target value. The behavior of the system, including its overshoot, settling time, rise time, and steady-state error can be controlled by the PID parameters: Kp, Ki, Kd. The standard PID block diagram is shown below:  </p>
+                <figure>
+                    <img src="robot/robot16.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure I. Feedback-control Block Diagram</figcaption>
+                </figure>
+                <br>
+                <p>This block diagram shows the target value of the system, Ƭ(t), the current value of the system, y(t), the subsequent error, e(t), and the correction factor that is applied to the system, u(t). The error term needs to be processed through the proportional, integrator, and derivative controllers to determine the correcting factor to be applied to the next step. The proportional controller just applies a correction factor to the current error term. The integrator controller applies a correction factor to the total error accumulated over a period of time. The derivative controller applies a correction factor to the change in error from the previous time-step. The behavior of the system can be controlled by modifying these individual correction terms. The step-response plot is shown below, which depicts how a real-system may respond to a unit step change in the target value.  </p>
+                <figure>
+                    <img src="robot/robot17.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure II. Step Response Plot</figcaption>
+                </figure>
+                <br>
+                <p>The step-response plot shows several parameters that characterize the behavior of the system. The rise time is the time it takes to go from 10% to 90% of the desired change. The settling time is the time it takes to get within a few percent of the target value, typically 1-5%. The overshoot is a percentage that describes the amount that the system overshoots past the desired value. Finally, steady-state error describes how much error remains in the system once the response stabilizes.  </p>
+                <h3>Application:</h3>
+                <p>For our application of feedback-based control, we followed the pseudocode diagrammed by Dr. Oakes, which describes the discrete-time implementation of PID control to apply it to the Dofbot. We first programmed the functionality in a local python environment and simulated the current step by using the output from the previous step as the reading for the current step value. This translates to setting the system/process block in Figure I equal to one, or assuming the system is perfectly stable with no noise or error. This resulted in the plot below.  </p>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='robot/robot18.png' ">
+                    <figure>
+                        <img src="robot/robot18.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Figure III. Joint angles w/PID-control and with no live feedback</figcaption>
+                    </figure>
+                </button>
+
+                <br>
+                <p>Once the functionality with these PID parameters was implemented with live-feedback from the Dofbot, it proved to be unstable. The video of these results can be seen in Figure IV. For context, the results without live feedback can be seen in Figure V. Therefore, tuning needed to be performed on the PID parameters to achieve a more stable system. Following the diagram in Figure VI, we increased Kd and decreased Ki and Kp to decrease overshoot and instability in the system.  </p>
+                <figure>
+                    <img src="robot/pid_unstable.gif" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure IV. PID - Unstable</figcaption>
+                </figure>
+                <figure>
+                    <img src="robot/pid_stable_oscillating_simulated.gif" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure V. PID - Stable Oscillating</figcaption>
+                </figure>
+                <figure>
+                    <img src="robot/robot19.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure VI. PID parameters and their effects on the system</figcaption>
+                </figure>
+                <br>
+                <p>There were warnings about increasing the derivative term in noisy systems, but the large derivative term did not cause any issues for our system. Our final parameters are shown in the table below, along with some parameters of the system for a test run we performed with the feedback-control.	</p>
+                <figure>
+                    <img src="robot/robot20.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure VII. Tuned PID Parameters</figcaption>
+                </figure>
+                <figure>
+                    <img src="robot/robot21.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure VIII. Tuned System Parameters</figcaption>
+                </figure>
+                <br>
+                <p>The joint plots corresponding to this test run and system parameters are shown below. </p>
+                <button class="w3-button w3-light-grey w3-padding w3-padding-16 w3-margin-top w3-margin-bottom" type="submit" onclick="window.location.href='robot/robot22.png' ">
+                    <figure>
+                        <img src="robot/robot22.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                        <figcaption>Figure IX. Joint plots for PID system with live-feedback</figcaption>
+                    </figure>
+                </button>
+
+                <br>
+                <p>These system parameters were tested on the Dofbot and the results are shown in Figure X below. In the future, we hope to implement the PID functionality with the object-avoidance algorithm to move from one point to another accurately while also avoiding obstacles in its path.</p>
+                <figure>
+                    <img src="robot/pid_stable_dofbot.gif" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%" id="pid">
+                    <figcaption>Figure X. PID - Stable</figcaption>
+                </figure>
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

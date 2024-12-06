@@ -1,0 +1,191 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>M.Aksen Project Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./roboticsProject.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>3. Obstacle Avoidance & Path Generation</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h3>Summary:</h3>
+                <p>Path generation with obstacle avoidance was done with an energy based avoidance algorithm. This code would take in two locations for the PnP action and create a path in the XYZ space.  </p>
+                <h3>Theory:</h3>
+                <p>The theory behind the algorithm for path planning with obstacle avoidance is rooted in the idea of attraction and repulsion. The algorithm essentially takes linear steps between point A and point B, based on the amount of attraction force there is to the target. However, if during the update step the current position in the trajectory encounters a predefined repulsion force within its range, the next position will consider this in the calculation of its next step. This next position calculation is shown in the figure below as the summation of the attraction and repulsion forces for the step.  </p>
+                <figure>
+                    <img src="robot/robot10.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure I. Course notes for a Path Generation algorithm w/obstacle avoidance</figcaption>
+                </figure>
+                <figure>
+                    <img src="robot/robot11.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure II. Equations for attraction force (top left component) and  a repulsion force (bottom)</figcaption>
+                </figure>
+                <br>
+                <p>For the equation to work properly, values k, &eta;, &rho;, and &alpha; must be tuned such that there is no collision into the obstacle and so that the obstacle does not repulse too much once within the repulsion radius.  k, &eta;, &rho;, and &alpha; represent the linear attraction, net repulsion, repulsion radius and step update constants respectively. The working constants for the implemented algorithm are shown in the application. </p>
+                <h3>Application:</h3>
+                <p>The code for this algorithm was written in python and it takes in arguments for final and desired positions. In addition, the path generation algorithm is integrated with the inverse kinematics algorithm so that for each step along the path, joint angles are also given.  </p>
+                <figure>
+                    <img src="robot/robot12.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure III. Inputs for the Path/w Avoidance function</figcaption>
+                </figure>
+                <br>
+                <p>The equations for the repulsion and attraction forces from the theory section were implemented into the python code. This is shown in the figure below. </p>
+
+                <figure>
+                    <img src="robot/robot13.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure IV. Path Generation Code</figcaption>
+                </figure>
+                <br>
+                <p>One artifact to note from the generation of paths using this method is that due to using forces and updates, the distance between points along the path are not constant. The density of points increases when the path is in the repulsion field. To account for this in the creation of a smooth motion for the robot, the norm between the joint angles is taken and then multiplied by a factor so that we can create a constant time between positions and thus a constant velocity throughout the path. Paths were then simulated in MatLab to show the algorithm working. A comparison between the path generation with and without avoidance was done and shown in the figures below.</p>
+
+                <figure>
+                    <img src="robot/robot14.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure V. Path Generation w/out Avoidance in MatLab</figcaption>
+                </figure>
+                <figure>
+                    <img src="robot/robot15.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure VI. Path Generation with Avoidance in MatLab</figcaption>
+                </figure>
+                <figure>
+                    <img src="robot/PnP_w_o_avoidance.gif" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure VII. Path Generation w/out Avoidance Dofbot Test</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="robot/PnP_w_avoidance.gif" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure VIII. Path Generation with Avoidance Dofbot Test</figcaption>
+                </figure>
+                <br>
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

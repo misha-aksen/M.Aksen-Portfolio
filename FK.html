@@ -1,0 +1,181 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+        </style>
+        <title>M.Aksen Project Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="./roboticsProject.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h2><b>1. Forward Kinematics</b></h2>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h3>Summary:</h3>
+                <p>For this project, the RPI robotics toolbox (ROX) was used for calculating forward kinematics of the Dofbot.  The ROX toolbox uses the product of exponentials method (PoE) for mapping the links of the robot spatial kinematic chain. </p>
+                <h3>Theory:</h3>
+                <p>The PoE method essentially multiplies and adds the rotations and position matrices between links in a robot with a predefined zero condition. In the case of the Dofbot we had five (5) revolute joints in a chain attached by straight links. We define the h-axis for the robot as the rotation axes for each joint relative to the base frame O. This defines the coordinate frames for each joint. </p>
+                <p>The next step becomes defining the position vectors for the link lengths relative to each respective coordinate frame defined previously based on the rotation axes. These can be defined by multiplying the lengths in their respective unit vector directions and defining a 3D-P vector.  </p>
+                <figure>
+                    <img src="robot/robot2.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure I. Dofbot sketch</figcaption>
+                </figure>
+                <br>
+
+                <p>After everything is defined, positions for the joints and most importantly the end effector can be calculated. The equation for the end effector position (full multiplication of the kinematic chain) is shown in Figure 2. </p>
+                <figure>
+                    <img src="robot/robot3.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure II. End effector (POT) calculation for DofBot</figcaption>
+                </figure>
+                <br>
+
+                <p>With this fundamental knowledge, it can be applied into calculating robot positions. In the case of the project, a robotics toolbox was used. </p>
+                <h3>Application:</h3>
+                <p>This theory was applied by using the ROX toolbox and doing checks in the MatLab robotics toolbox and scripts provided from the course notes. </p>
+                <p>In ROX, we can define the robot dimensional matrices by defining three structures: H, P and joint_type. H is a matrix that defines through which axes the rotation of the joint is occurring for all the joints. This vector lists all of the joints consecutively, as do the other two structures for defining the arm joints. P is the matrix that defines each of the joint lengths relative to the zero-configuration base frame. And the joint_type matrix consecutively defines the type of joint in the kinematic chain. In the case of the Dofbot where the joints are all revolute, they are all identified by a zero. </p>
+                <p>In the figures below, it shows the structures filled in for the zero configuration used in our implementation of the Dofbot. And also the simulated Dofbot in Matlab. </p>
+               <figure>
+                    <img src="robot/robot4.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure III. Inputs for the zero configuration of the robot</figcaption>
+               </figure>
+
+                <figure>
+                    <img src="robot/robot5.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure IV. Function for calling the end effector position using FK</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="robot/robot6.png" alt="Me" class="w3-image w3-padding-32" width="100%" height="100%">
+                    <figcaption>Figure V. Zero Configuration of the Dofbot represented in MatLab Robotics Simulator</figcaption>
+                </figure>
+
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

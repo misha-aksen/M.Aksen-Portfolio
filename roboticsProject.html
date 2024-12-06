@@ -1,0 +1,249 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            .container:hover {
+            background-color: LightGray
+            }
+
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px
+            }
+
+             #dropdown-subprojects {
+                display:none;
+            }
+
+            #subprojects:hover #dropdown-subprojects{
+                display:block;
+                text-align: center;
+            }
+        </style>
+        <title>M.Aksen Project Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+
+            strong {
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGCD4JQGBD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGCD4JQGBD');
+</script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+    if (localStorage.getItem("bandsawproject.html-quote-scroll") != null) {
+        $(window).scrollTop(localStorage.getItem("bandsawproject.html-quote-scroll"));
+    }
+
+    $(window).on("scroll", function() {
+        localStorage.setItem("bandsawproject.html-quote-scroll", $(window).scrollTop());
+    });
+
+  });
+</script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Michael<br>Aksen</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+            <div id="subprojects">
+                <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">ROBOTICS SUBPROJECTS</a>
+                <ul id="dropdown-subprojects" style="list-style-type: none;">
+                    <li><a href="FK.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">1. Forward Kinematics</a></li>
+                    <li><a href="IK.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">2. Inverse Kinematics</a></li>
+                    <li><a href="ObstacleAvoidance.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">3. Obstacle Avoidance & Path Generation</a></li>
+                    <li><a href="PathFollowing.html" onclick="w3_close()" class="w3-bar-item w3-button" style="text-align:left">4. Path Following w/Feedback</a></li>
+                </ul>
+            </div>
+            <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Michael Aksen</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+            <div class="w3-content" style="max-width:600px">
+                <h2><b>Robotic Manipulator</b></h2>
+            </div>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h3><b>Abstract</b></h3>
+                <p>For this project, forward and inverse kinematics were demonstrated on a Dofbot through the generation of paths that were calculated with the associated algorithms. In addition, by using the inverse and forward kinematics combined with path following with feedback, new, creative tasks were explored for the Dofbot. The goal for this project was to create a Dofbot that could pick and place objects with obstacle avoidance and feedback. This task was accomplished; the results are discussed in detail in this report and video and simulation demonstrations are shown as well.</p>
+                <h3><b>Introduction:</b></h3>
+                <p>The motivation behind this project was driven by the past experiences of both me and my teammate working in manufacturing/industrial environments. Both team members had worked with The Factory Amsterdam (TFA), a job shop started by RPI graduates. An interview with the members there was conducted and questions regarding their most wanted robotics applications and currently most used tools were asked.
+	Tasks that were derived from the conversations included laser marking of parts and automation of picking and placing parts that are located at a specific location.
+	Many parts that are machined at this shop are laser cut and also mass produced at a scale that makes human operation a full time job. By applying some form of automation for Pick-and-Place (PnP) and laser cutting, human labor costs can be diminished.
+	These tasks were ultimately the ones picked for the basis of the project and combined with the requirements of the course to create project objectives. The project goals were to use the YahBoom DofBot platform to accomplish PnP with obstacle avoidance, and also follow paths for laser etching.
+	For these tasks, path generation was done in a mix of MatLab and Python code and the interface for the robot was performed using Jupyter Labs Python notebooks. Pre-written path generations were fed into the robot because of the computational efficiency and also because in this factory scenario the environment could be kept fairly consistent in order for the tasks to be performed repeatedly.
+ </p>
+
+                <h3><b>Collaboration:</b></h3>
+                <p>I worked on this project with a partner. We developed the Forward and Inverse Kinematic algorithms together and after validating that they worked, I worked on Path Following with Feedback while he worked on Obstacle Avoidance and Path Generation. We met a couple times a week and were able to effectively work together to complete the deliverables for this project.</p>
+                <h3><b>DOFBOT Interface:</b></h3>
+                <p>A dofbot interface program was developed to submit commands to the robot. The interface program acted as a middleman between the user and the robot, prompting the user for an input and outputting corresponding commands to the robot. There were three possible inputs the program would accept: a text file with a set of arm configurations (joint angles), a manual input of a POT and ROT, or a manual input of a joint number and joint angle to change with an optional speed control to add a time delay between points. Once the user entered one of these three acceptable inputs, the program would use Inverse and Forward Kinematic algorithms, as well as a pre-built Robotic Toolbox, to generate and run specified arm configurations with optional end effector manipulation. Furthermore, a startup and retire clause were implemented to reset the dofbot joints, and additional movements were hardcoded to pickup the blocks more reliably. In addition, a standard grip function, demonstrated in the PnP videos, was implemented with a boolean argument that defines whether the dofbot is carrying an object or is empty. </p>
+                <h3><b>Four Steps</b></h3>
+                <div class="container w3-content w3-padding" style="max-width:600px;" >
+                    <p><a href="FK.html">
+                    <img src="robot/robot2.png" alt="Dofbot Sketch" width="100%">
+                    </a></p>
+                    <h1 style="color:black;">1. Forward Kinematics</h1>
+                </div>
+                <div class="container w3-content w3-padding" style="max-width:600px;" >
+                    <p><a href="IK.html">
+                    <img src="robot/robot6.png" alt="Robot Simulation" width="100%">
+                    </a></p>
+                    <h1 style="color:black;">2. Inverse Kinematics</h1>
+                </div>
+                <div class="container w3-content w3-padding" style="max-width:600px;" >
+                    <p><a href="ObstacleAvoidance.html">
+                    <img src="robot/robot15.png" alt="Obstacle Avoidance" width="100%">
+                    </a></p>
+                    <h1 style="color:black;">3. Obstacle Avoidance & Path Generation</h1>
+                </div>
+                <div class="container w3-content w3-padding" style="max-width:600px;" >
+                    <p><a href="PathFollowing.html">
+                    <img src="robot/pid_stable_dofbot.gif" alt="Path Following" width="100%">
+                    </a></p>
+                    <h1 style="color:black;">4. Path Following w/Feedback</h1>
+                </div>
+                <br>
+                <h3><b>Challenges & Solutions:</b></h3>
+                <p><ul>
+                    <li>Translating MatLab simulations and code framework into a real-world environment: Small perturbations in the environment or minor shifts in the placement of parts had a snowball effect and led to large changes in the results. Thus, precise control of the environment was crucial to successful PnP tests.</li>
+                    <li>The Dofbot learning curve (the time it took to get used to the Dofbot environment and functionality)</li>
+                    <li>Reading & Writing joint angles to the Dofbot was difficult until another student wrote a Robotics Toolbox that we utilized for our project</li>
+                </ul></p>
+                <h3><b>Future Improvements:</b></h3>
+                <p><ul>
+                    <li>Better testing of the robot path for drawing</li>
+                    <li>Integrating PID functionality with the Object Avoidance and Path Generation algorithm </li>
+                    <li>Try a different IK method for stability, maybe the subproblems method</li>
+                </ul></p>
+                <h3><b>Conclusion:</b></h3>
+
+                <p>Overall, the tasks that were set out to be accomplished were successfully completed. PnP worked as intended and this can be shown by comparing the simulation and demonstration on hardware. The PnP task videos demonstrate that a path could be generated and followed which included obstacle avoidance. In addition, feedback-based position control of the Dofbot joints was also successful, with the system able to consistently achieve less than 0.005 radians of error in all joints. The reach task of drawing G-code parsed 2D objects was not successful and so was only briefly mentioned in this report. Nevertheless, invaluable experience developing a framework for interacting with a robot was achieved through FK, IK, Obstacle Avoidance, and Closed-Loop Path Feedback algorithms that could translate to more advanced projects in the future. </p>
+                <hr class="w3-opacity">
+                <h3><b>Documentation:</b></h3>
+                <p><b>Videos referenced in this project can be found in the following link: </b></p>
+                <a href="https://drive.google.com/drive/u/1/folders/1w5sAl1d3zBsXoCL7Snbdwx03Txsj941d" target="_blank">Video Folder </a>
+                <p><b>Code referenced in this project can be found in the following link: </b></p>
+                <a href="https://drive.google.com/drive/u/1/folders/1ZpornG-ivYYv57eLvEMoI_ZJQGM8Bs6F" target="_blank">Code Folder </a>
+                <h3><b>Sources:</b></h3>
+                <p>RPI Robotics I, Oakes, [1]</p>
+                <p><a href="https://piazza.com/rpi/fall2022/ecse44806470mane41206120csci4480/resources" target="_blank">https://piazza.com/rpi/fall2022/ecse44806470mane41206120csci4480/resources. </a></p>
+
+            </div>
+        </div>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content w3-light-grey w3-center w3-padding-32" style="max-width:600px">
+                <h4 class="w3-center"><b>Contact Me</b></h4>
+                <p class="w3-center">Email: <strong> <a href="mailto:michael.aksen@gmail.com">michael.aksen@gmail.com</a> </strong> <br>
+                LinkedIn: <strong><a href="https://www.linkedin.com/in/aksenm/" target="_blank"> https://www.linkedin.com/in/aksenm/</a></strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
