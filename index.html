@@ -31,6 +31,13 @@
                 display:block;
                 text-align: center;
             }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                padding: 10px;
+            }
         </style>
         <title>M.Aksen Project Portfolio</title>
         <meta charset="UTF-8">
@@ -129,34 +136,63 @@ $(document).ready(function () {
         <div class="w3-hide-large" style="margin-top:83px"></div>
 
         <!-- Photo grid -->
-        <h1> <center>Project Portfolio </center></h1>
+        <h1> <center>Michael's Project Portfolio </center></h1>
+        <p> <center>Hi, my name is Michael Aksen. I am an engineer. Take a look at some of my recent projects. Thanks for stopping by!</center></p>
         <br>
-        <div class="container w3-content w3-padding" style="max-width:600px;" >
+        <div class="grid-container w3-hide-small">
+            <div class="container w3-content item1 w3-padding" style="max-width:600px;" >
+                <p><a href="airplaneproject.html">
+                <img src="air/airplane1.png" alt="airplane" height="400px">
+                </a></p>
+                <h2 style="color:black;">Manufacturing 300 Toy Airplanes</h2>
+            </div>
+            <br>
+            <div class="container w3-content item2 w3-padding" style="max-width:600px;" >
+                <p><a href="bandsawproject.html">
+                <img src="bandsaw1_cropped.jpg" alt="bandsaw" height="400px">
+                </a></p>
+                <h2 style="color:black;">Computerizing an Industrial Bandsaw</h2>
+            </div>
+            <div class="container item3 w3-content w3-padding" style="max-width:600px;" >
+                <p><a href="atomicorbital.html">
+                <img src="sfm/sfm8.jpg" alt="Atomic Flight" height="400px">
+                </a></p>
+                <h2 style="color:black;">Atomic Orbital Kinematics</h2>
+            </div>
+            <br>
+            <div class="container item4 w3-content w3-padding" style="max-width:600px;" >
+                <p><a href="roboticsProject.html">
+                <img src="robot/pid_stable_dofbot-square.gif" alt="DOFBOT Robot" height="400px">
+                </a></p>
+                <h2 style="color:black;">Robotic Manipulator</h2>
+            </div>
+        </div>
+        <div class="container w3-hide-large w3-padding" style="max-width:600px;" >
             <p><a href="airplaneproject.html">
             <img src="air/airplane1.png" alt="airplane" width="100%">
             </a></p>
-            <h1 style="color:black;">Manufacturing 300 Toy Airplanes</h1>
+            <h2 style="color:black;">Manufacturing 300 Toy Airplanes</h2>
         </div>
         <br>
-        <div class="container w3-content w3-padding" style="max-width:600px;" >
+        <div class="container w3-hide-large w3-padding" style="max-width:600px;" >
             <p><a href="bandsawproject.html">
             <img src="bandsaw1_cropped.jpg" alt="bandsaw" width="100%">
             </a></p>
-            <h1 style="color:black;">Computerizing an Industrial Bandsaw</h1>
+            <h2 style="color:black;">Computerizing an Industrial Bandsaw</h2>
         </div>
         <br>
-        <div class="container w3-content w3-padding" style="max-width:600px;" >
+        <div class="container w3-hide-large w3-content w3-padding" style="max-width:600px;" >
             <p><a href="atomicorbital.html">
-            <img src="sfm/sfm0.jpg" alt="Atomic Flight" width="100%">
+            <img src="sfm/sfm8.jpg" alt="Atomic Flight" width="100%">
             </a></p>
-            <h1 style="color:black;">Atomic Orbital Kinematics</h1>
+            <h2 style="color:black;">Atomic Orbital Kinematics</h2>
         </div>
         <br>
-        <div class="container w3-content w3-padding" style="max-width:600px;" >
+        <div class="container w3-hide-large w3-content w3-padding" style="max-width:600px;" >
             <p><a href="roboticsProject.html">
             <img src="robot/pid_stable_dofbot.gif" alt="DOFBOT Robot" width="100%">
             </a></p>
-            <h1 style="color:black;">Robotic Manipulator</h1>
+            <h2 style="color:black;">Robotic Manipulator</h2>
         </div>
         <br>
         <br>
